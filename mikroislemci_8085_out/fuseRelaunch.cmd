@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem_isim_beh.exe" -prj "/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem_beh.prj" "work.top_8085_with_mem" 

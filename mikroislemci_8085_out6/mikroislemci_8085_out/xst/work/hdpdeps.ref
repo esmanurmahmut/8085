@@ -1,0 +1,147 @@
+V3 83
+FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd 2025/12/11.15:09:22 P.20131013
+EN work/reg8 1765465772 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/reg8/behav 1765465773 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/reg8 1765465772
+EN work/pch 1765465774 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/pch/struct 1765465775 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/pch 1765465774 CP CELLPC
+EN work/pcl 1765465776 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/pcl/struct 1765465777 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/pcl 1765465776 CP CELLPC
+EN work/trans_latch 1765465778 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/trans_latch/behav 1765465779 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/trans_latch 1765465778
+EN work/FULLADD 1765465780 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/FULLADD/behav 1765465781 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/FULLADD 1765465780
+EN work/adder8 1765465782 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/adder8/struct 1765465783 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/adder8 1765465782 CP FULLADD
+EN work/alu 1765465784 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/alu/behav 1765465785 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/alu 1765465784 CP adder8
+EN work/CELLPC 1765465786 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/CELLPC/behav 1765465787 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/CELLPC 1765465786
+EN work/SP 1765465788 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/SP/behav 1765465789 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/SP 1765465788
+EN work/REG_ARR 1765465790 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/REG_ARR/behav 1765465791 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/REG_ARR 1765465790 CP reg8 CP SP CP pcl CP pch
+EN work/MUX2X1_VEC 1765465792 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MUX2X1_VEC/behav 1765465793 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/MUX2X1_VEC 1765465792
+EN work/TRI_ARR 1765465794 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/TRI_ARR/behav 1765465795 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/TRI_ARR 1765465794
+EN work/COUNTER05 1765465796 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/COUNTER05/behav 1765465797 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/COUNTER05 1765465796
+EN work/add_latch_high 1765465798 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/add_latch_high/behav 1765465799 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/add_latch_high 1765465798 CP reg8
+EN work/cpu_control 1765465800 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/cpu_control/behav 1765465801 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/cpu_control 1765465800
+EN work/cpu_8085 1765465802 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/cpu_8085/behav 1765465803 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd \
+      EN work/cpu_8085 1765465802 CP trans_latch CP COUNTER05 CP add_latch_high \
+      CP reg8 CP alu CP REG_ARR CP cpu_control CP TRI_ARR CP MUX2X1_VEC
+FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd 2025/12/11.13:48:39 P.20131013
+EN work/latch8 1765465804 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/latch8/rtl 1765465805 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd \
+      EN work/latch8 1765465804
+FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd 2025/12/11.13:48:39 P.20131013
+EN work/led_interface 1765465808 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/led_interface/behavioral 1765465809 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd \
+      EN work/led_interface 1765465808
+FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd 2025/12/11.14:13:11 P.20131013
+EN work/memory32k 1765465806 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/memory32k/rtl 1765465807 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd \
+      EN work/memory32k 1765465806
+FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd 2025/12/11.13:48:39 P.20131013
+EN work/top_8085_with_mem 1765465810 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/top_8085_with_mem/rtl 1765465811 \
+      FL /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd \
+      EN work/top_8085_with_mem 1765465810 CP work/cpu_8085 CP work/latch8 \
+      CP work/memory32k CP led_interface
+FL /home/ise/ISEshared/mikroislemci_8085_led/cpu_8085.vhd 2025/11/13.09:36:24 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_led/latch8.vhd 2025/11/13.08:27:43 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_led/led_interface.vhd 2025/11/13.09:27:17 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_led/memory32k.vhd 2025/11/13.08:27:43 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.vhd 2025/11/13.09:26:47 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd 2025/12/04.06:57:49 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd 2025/11/14.07:48:54 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd 2025/12/04.06:58:22 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd 2025/12/04.11:16:17 P.20131013
+FL /home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd 2025/11/19.06:07:28 P.20131013
+FL /home/ise/mikroislemci_8085/cpu_8085.vhd 2025/10/24.08:33:08 P.20131013
+FL /home/ise/mikroislemci_8085/latch8.vhd 2025/08/13.09:23:54 P.20131013
+FL /home/ise/mikroislemci_8085/memory32k.vhd 2025/08/13.09:32:39 P.20131013
+FL /home/ise/mikroislemci_8085/top_8085_with_mem.vhd 2025/10/24.08:25:23 P.20131013
+FL /home/ise/paylasim/mikroislemci_8085_out/cpu_8085.vhd 2025/11/13.15:42:04 P.20131013
+FL /home/ise/paylasim/mikroislemci_8085_out/latch8.vhd 2025/11/13.14:06:39 P.20131013
+FL /home/ise/paylasim/mikroislemci_8085_out/led_interface.vhd 2025/11/14.04:08:53 P.20131013
+FL /home/ise/paylasim/mikroislemci_8085_out/memory32k.vhd 2025/11/13.15:53:39 P.20131013
+FL /home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.vhd 2025/11/13.16:08:57 P.20131013

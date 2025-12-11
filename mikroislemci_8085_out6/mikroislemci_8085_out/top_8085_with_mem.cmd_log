@@ -1,0 +1,394 @@
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/mikroislemci_8085/top_8085_with_mem.xst" -ofn "/home/ise/mikroislemci_8085/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_led/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/paylasim/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc top_8085_with_mem.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o top_8085_with_mem_map.ncd top_8085_with_mem.ngd top_8085_with_mem.pcf 
+par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.ncd top_8085_with_mem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
+bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 

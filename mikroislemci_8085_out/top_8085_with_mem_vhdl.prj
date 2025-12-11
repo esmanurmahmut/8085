@@ -1,5 +1,0 @@
-vhdl work "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd"
-vhdl work "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd"
-vhdl work "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd"
-vhdl work "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd"
-vhdl work "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd"
