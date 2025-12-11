@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd";
+static const char *ng0 = "/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd";
 
 
 
@@ -45,7 +45,7 @@ LAB0:    xsi_set_current_line(1022, ng0);
         goto LAB2;
 
 LAB4:    xsi_set_current_line(1025, ng0);
-    t1 = (t0 + 4905);
+    t1 = (t0 + 5057);
     t5 = (t0 + 1648U);
     t6 = *((char **)t5);
     t5 = (t6 + 0);

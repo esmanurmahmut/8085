@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" Line 115: Actual for formal port <arg fmt="%s" index="1">cpu_reset</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" Line 115: Actual for formal port <arg fmt="%s" index="1">cpu_reset</arg> is neither a static name nor a globally static expression
 </msg>
 
 </messages>

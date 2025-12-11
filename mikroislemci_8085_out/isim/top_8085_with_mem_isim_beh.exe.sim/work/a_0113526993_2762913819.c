@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd";
+static const char *ng0 = "/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd";
 
 
 
@@ -47,34 +47,34 @@ static void work_a_0113526993_2762913819_p_0(char *t0)
 LAB0:    xsi_set_current_line(1140, ng0);
     t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7666);
+    t1 = (t0 + 8058);
     t4 = xsi_mem_cmp(t1, t2, 3U);
     if (t4 == 1)
         goto LAB3;
 
-LAB9:    t5 = (t0 + 7669);
+LAB9:    t5 = (t0 + 8061);
     t7 = xsi_mem_cmp(t5, t2, 3U);
     if (t7 == 1)
         goto LAB4;
 
-LAB10:    t8 = (t0 + 7672);
+LAB10:    t8 = (t0 + 8064);
     t10 = xsi_mem_cmp(t8, t2, 3U);
     if (t10 == 1)
         goto LAB5;
 
-LAB11:    t11 = (t0 + 7675);
+LAB11:    t11 = (t0 + 8067);
     t13 = xsi_mem_cmp(t11, t2, 3U);
     if (t13 == 1)
         goto LAB6;
 
-LAB12:    t14 = (t0 + 7678);
+LAB12:    t14 = (t0 + 8070);
     t16 = xsi_mem_cmp(t14, t2, 3U);
     if (t16 == 1)
         goto LAB7;
 
 LAB13:
 LAB8:    xsi_set_current_line(1157, ng0);
-    t1 = (t0 + 7681);
+    t1 = (t0 + 8073);
     t3 = (t0 + 3208U);
     t5 = *((char **)t3);
     t3 = (t5 + 0);

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd";
+static const char *ng0 = "/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd";
 extern char *IEEE_P_1242562249;
 extern char *IEEE_P_2592010699;
 
@@ -45,7 +45,7 @@ LAB0:    xsi_set_current_line(56, ng0);
 
 LAB3:    t1 = (t0 + 1512U);
     t2 = *((char **)t1);
-    t1 = (t0 + 10408U);
+    t1 = (t0 + 10912U);
     t3 = ieee_p_1242562249_sub_17802405650254020620_1035706684(IEEE_P_1242562249, t2, t1);
     t4 = (t0 + 6352);
     t5 = (t4 + 56U);
@@ -301,7 +301,7 @@ LAB0:    xsi_set_current_line(77, ng0);
 LAB3:    t1 = (t0 + 1512U);
     t2 = *((char **)t1);
     t4 = ((IEEE_P_2592010699) + 4000);
-    t5 = (t0 + 10408U);
+    t5 = (t0 + 10912U);
     t1 = xsi_base_array_concat(t1, t3, t4, (char)99, (unsigned char)2, (char)97, t2, t5, (char)101);
     t6 = (1U + 9U);
     t7 = (10U != t6);

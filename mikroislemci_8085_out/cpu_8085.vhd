@@ -1444,6 +1444,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "01110111" => --  MOV M,A 
          CONTROL_WORD := "000111000110000000000011111110010110" ; 
+			
+		 when  "11000011" => --  JMP A16 
+         CONTROL_WORD := "000001000110010000000011001110000011" ;
 
        when  "11011010" => --  JC 
       if (CY = '1') then 
@@ -1675,6 +1678,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "01110111" => --  MOV M,A 
         CONTROL_WORD := "010111000101001000000011111110010110" ; 
+		  
+		 when  "11000011" => --  JMP A16 
+         CONTROL_WORD := "010001000101001100000011111110101110" ;
 
        when  "11011010" => --  JC 
       if (CY = '1') then 
@@ -1750,6 +1756,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "01110111" => --  MOV M,A 
         CONTROL_WORD := "000111000100001000000011111110011100" ; 
+		  
+		 when  "11000011" => --  JMP A16 
+         CONTROL_WORD := "000001000100100000000001010110101110" ;
   
 
        when  "11011010" => --  JC 
@@ -1827,6 +1836,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "01110111" => --  MOV M,A 
         CONTROL_WORD := "000111000100001000000011111110011101" ; 
+		  
+		 when  "11000011" => --  JMP A16 
+         CONTROL_WORD := "000001000100100000000011111110101110" ;
   
 
        when  "11011010" => --  JC 
@@ -1883,6 +1895,10 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
     case ID_OUT_S is 
 	  when "11010011" => -- OUT 
 		  CONTROL_WORD := "010001001011001000000011111110110110" ;
+		  
+		 when  "11000011" => --  JMP A16 
+         CONTROL_WORD := "010001000101001100000011111110101110" ;
+			
        when  "11011010" => --  JC 
         CONTROL_WORD := "000001000101001000000011111110101110" ; 
 
@@ -1911,6 +1927,10 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
     case ID_OUT_S is 
 	 	  when "11010011" => -- OUT 
 		  CONTROL_WORD := "000001001010001000000011111110011100" ;
+		  
+		 when  "11000011" => --  JMP A16 
+         CONTROL_WORD := "000001000100100000000001011000101110" ;
+			
        when  "11011010" => --  JC 
         CONTROL_WORD := "000001000100100000000001011000101110" ; 
 
@@ -1941,6 +1961,10 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
             -- iomn=1, s1=0, s0=1. WRn=1. Tüm sinyaller inaktif.
             -- ZERO_SEQ_COUNTER=1 (0) (Sekans sayacını sıfırla, komut bitişi)
             CONTROL_WORD := "000001001010001000000011111110101111" ;
+				
+		 when  "11000011" => --  JMP A16 
+         CONTROL_WORD := "000001000100100000000011111110101111" ;
+			
        when  "11011010" => --  JC 
         CONTROL_WORD := "000000101001000000000000000000000011" ; 
 

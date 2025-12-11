@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd";
+static const char *ng0 = "/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_2763492388968962707_503743352(char *, char *, unsigned int , unsigned int );
@@ -98,22 +98,22 @@ LAB2:    xsi_set_current_line(512, ng0);
 LAB5:    xsi_set_current_line(514, ng0);
     t2 = (t0 + 2768U);
     t4 = *((char **)t2);
-    t2 = (t0 + 6995);
+    t2 = (t0 + 7331);
     t11 = xsi_mem_cmp(t2, t4, 2U);
     if (t11 == 1)
         goto LAB8;
 
-LAB13:    t8 = (t0 + 6997);
+LAB13:    t8 = (t0 + 7333);
     t12 = xsi_mem_cmp(t8, t4, 2U);
     if (t12 == 1)
         goto LAB9;
 
-LAB14:    t13 = (t0 + 6999);
+LAB14:    t13 = (t0 + 7335);
     t15 = xsi_mem_cmp(t13, t4, 2U);
     if (t15 == 1)
         goto LAB10;
 
-LAB15:    t16 = (t0 + 7001);
+LAB15:    t16 = (t0 + 7337);
     t18 = xsi_mem_cmp(t16, t4, 2U);
     if (t18 == 1)
         goto LAB11;

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd";
+static const char *ng0 = "/home/ise/paylasim/mikroislemci_8085_out6/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_374109322130769762_503743352(char *, unsigned char );
@@ -52,8 +52,8 @@ LAB3:    t1 = (t0 + 2472U);
     t1 = (t0 + 4232U);
     t3 = *((char **)t1);
     t5 = ((IEEE_P_2592010699) + 4000);
-    t6 = (t0 + 16240U);
-    t7 = (t0 + 16256U);
+    t6 = (t0 + 17296U);
+    t7 = (t0 + 17312U);
     t1 = xsi_base_array_concat(t1, t4, t5, (char)97, t2, t6, (char)97, t3, t7, (char)101);
     t8 = (8U + 8U);
     t9 = (16U != t8);
@@ -148,7 +148,7 @@ LAB5:    t2 = (t0 + 4392U);
     t8 = (t7 * 1U);
     t9 = (0 + t8);
     t2 = (t6 + t9);
-    t10 = (t0 + 16363);
+    t10 = (t0 + 17419);
     t12 = 1;
     if (7U == 7U)
         goto LAB8;
