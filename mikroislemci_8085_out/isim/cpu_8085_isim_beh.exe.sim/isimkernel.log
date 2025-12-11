@@ -1,0 +1,29 @@
+Command line:
+   cpu_8085_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57686
+
+Wed Nov 19 05:38:09 2025
+
+
+ Elaboration Time: 0.11 sec
+
+ Current Memory Usage: 197.726 Meg
+
+ Total Signals          : 516
+ Total Nets             : 590
+ Total Signal Drivers   : 169
+ Total Blocks           : 76
+ Total Primitive Blocks : 48
+ Total Processes        : 119
+ Total Traceable Variables  : 53
+ Total Scalar Nets and Variables : 1011
+Total Line Count : 854
+
+ Total Simulation Time: 0.14 sec
+
+ Current Memory Usage: 275.325 Meg
+
+Wed Nov 19 05:38:15 2025
+

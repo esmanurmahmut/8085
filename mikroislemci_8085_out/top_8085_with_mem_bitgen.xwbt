@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.ncd
+OUTFILE=/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4vq100
+WORKINGDIR=/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out
+LICENSE=WebPack
+USER_INFO=213218667_0_0_315

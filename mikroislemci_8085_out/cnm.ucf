@@ -1,0 +1,12 @@
+NET "cnm" LOC = "P58";
+NET "reset_n" LOC = "P98";
+NET "clk" LOC = "P36";
+
+NET "led_out<0>" LOC = "P15";
+NET "led_out<1>" LOC = "P12";
+NET "led_out<2>" LOC = "P61";
+NET "led_out<3>" LOC = "P60";
+NET "led_out<4>" LOC = "P5";
+NET "led_out<5>" LOC = "P4";
+NET "led_out<6>" LOC = "P3";
+NET "led_out<7>" LOC = "P2";

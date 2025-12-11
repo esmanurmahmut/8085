@@ -1,0 +1,783 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Reading design: top_8085_with_mem.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_8085_with_mem.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_8085_with_mem"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-vq100
+
+---- Source Options
+Top Module Name                    : top_8085_with_mem
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" in Library work.
+Architecture behav of Entity reg8 is up to date.
+Architecture struct of Entity pch is up to date.
+Architecture struct of Entity pcl is up to date.
+Architecture behav of Entity trans_latch is up to date.
+Architecture behav of Entity fulladd is up to date.
+Architecture struct of Entity adder8 is up to date.
+Architecture behav of Entity alu is up to date.
+Architecture behav of Entity cellpc is up to date.
+Architecture behav of Entity sp is up to date.
+Architecture behav of Entity reg_arr is up to date.
+Architecture behav of Entity mux2x1_vec is up to date.
+Architecture behav of Entity tri_arr is up to date.
+Architecture behav of Entity counter05 is up to date.
+Architecture behav of Entity add_latch_high is up to date.
+Architecture behav of Entity cpu_control is up to date.
+Architecture behav of Entity cpu_8085 is up to date.
+Compiling vhdl file "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd" in Library work.
+Architecture rtl of Entity latch8 is up to date.
+Compiling vhdl file "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd" in Library work.
+Entity <memory32k> compiled.
+Entity <memory32k> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd" in Library work.
+Architecture behavioral of Entity led_interface is up to date.
+Compiling vhdl file "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" in Library work.
+Architecture rtl of Entity top_8085_with_mem is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_8085_with_mem> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <cpu_8085> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <latch8> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <memory32k> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <led_interface> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <trans_latch> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <COUNTER05> in library <work> (architecture <behav>) with generics.
+	s = 4
+
+Analyzing hierarchy for entity <add_latch_high> in library <work> (architecture <behav>) with generics.
+	n = 7
+
+Analyzing hierarchy for entity <reg8> in library <work> (architecture <behav>) with generics.
+	n = 7
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behav>) with generics.
+	n = 7
+	s = 3
+
+Analyzing hierarchy for entity <REG_ARR> in library <work> (architecture <behav>) with generics.
+	n = 7
+	s = 4
+
+Analyzing hierarchy for entity <cpu_control> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <TRI_ARR> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <MUX2X1_VEC> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <ADDER8> in library <work> (architecture <struct>) with generics.
+	n = 7
+
+Analyzing hierarchy for entity <reg8> in library <work> (architecture <behav>) with generics.
+	n = 7
+
+Analyzing hierarchy for entity <SP> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <pcl> in library <work> (architecture <struct>) with generics.
+	n = 7
+
+Analyzing hierarchy for entity <pch> in library <work> (architecture <struct>) with generics.
+	n = 7
+
+Analyzing hierarchy for entity <FULLADD> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <CELLPC> in library <work> (architecture <behav>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_8085_with_mem> in library <work> (Architecture <rtl>).
+Entity <top_8085_with_mem> analyzed. Unit <top_8085_with_mem> generated.
+
+Analyzing Entity <cpu_8085> in library <work> (Architecture <behav>).
+Entity <cpu_8085> analyzed. Unit <cpu_8085> generated.
+
+Analyzing Entity <trans_latch> in library <work> (Architecture <behav>).
+Entity <trans_latch> analyzed. Unit <trans_latch> generated.
+
+Analyzing generic Entity <COUNTER05> in library <work> (Architecture <behav>).
+	s = 4
+Entity <COUNTER05> analyzed. Unit <COUNTER05> generated.
+
+Analyzing generic Entity <add_latch_high> in library <work> (Architecture <behav>).
+	n = 7
+Entity <add_latch_high> analyzed. Unit <add_latch_high> generated.
+
+Analyzing generic Entity <reg8> in library <work> (Architecture <behav>).
+	n = 7
+Entity <reg8> analyzed. Unit <reg8> generated.
+
+Analyzing generic Entity <alu> in library <work> (Architecture <behav>).
+	n = 7
+	s = 3
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing generic Entity <ADDER8> in library <work> (Architecture <struct>).
+	n = 7
+Entity <ADDER8> analyzed. Unit <ADDER8> generated.
+
+Analyzing Entity <FULLADD> in library <work> (Architecture <behav>).
+INFO:Xst:1561 - "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" line 295: Mux is complete : default of case is discarded
+Entity <FULLADD> analyzed. Unit <FULLADD> generated.
+
+Analyzing generic Entity <REG_ARR> in library <work> (Architecture <behav>).
+	n = 7
+	s = 4
+WARNING:Xst:819 - "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" line 820: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <dat_out_regA>, <dat_out_regF>, <dat_out_regB>, <dat_out_regC>, <dat_out_regD>, <dat_out_regE>, <dat_out_regH>, <dat_out_regL>, <dat_out_regSPL>, <dat_out_regSPH>, <dat_out_regPCL>, <dat_out_regPCH>, <dat_out_regW>, <dat_out_regZ>
+Entity <REG_ARR> analyzed. Unit <REG_ARR> generated.
+
+Analyzing Entity <SP> in library <work> (Architecture <behav>).
+Entity <SP> analyzed. Unit <SP> generated.
+
+Analyzing generic Entity <pcl> in library <work> (Architecture <struct>).
+	n = 7
+Entity <pcl> analyzed. Unit <pcl> generated.
+
+Analyzing Entity <CELLPC> in library <work> (Architecture <behav>).
+Entity <CELLPC> analyzed. Unit <CELLPC> generated.
+
+Analyzing generic Entity <pch> in library <work> (Architecture <struct>).
+	n = 7
+Entity <pch> analyzed. Unit <pch> generated.
+
+Analyzing Entity <cpu_control> in library <work> (Architecture <behav>).
+Entity <cpu_control> analyzed. Unit <cpu_control> generated.
+
+Analyzing Entity <TRI_ARR> in library <work> (Architecture <behav>).
+Entity <TRI_ARR> analyzed. Unit <TRI_ARR> generated.
+
+Analyzing Entity <MUX2X1_VEC> in library <work> (Architecture <behav>).
+Entity <MUX2X1_VEC> analyzed. Unit <MUX2X1_VEC> generated.
+
+Analyzing Entity <latch8> in library <work> (Architecture <rtl>).
+Entity <latch8> analyzed. Unit <latch8> generated.
+
+Analyzing Entity <memory32k> in library <work> (Architecture <rtl>).
+Entity <memory32k> analyzed. Unit <memory32k> generated.
+
+Analyzing Entity <led_interface> in library <work> (Architecture <behavioral>).
+Entity <led_interface> analyzed. Unit <led_interface> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <latch8>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd".
+    Found 8-bit register for signal <reg_q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <latch8> synthesized.
+
+
+Synthesizing Unit <memory32k>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd".
+    Found 512x8-bit single-port RAM <Mram_ram> for signal <ram>.
+    Found 8-bit tristate buffer for signal <data>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 Tristate(s).
+Unit <memory32k> synthesized.
+
+
+Synthesizing Unit <led_interface>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd".
+WARNING:Xst:647 - Input <A<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <led_data>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <led_interface> synthesized.
+
+
+Synthesizing Unit <trans_latch>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+    Found 8-bit register for signal <dat_out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <trans_latch> synthesized.
+
+
+Synthesizing Unit <COUNTER05>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+    Found 5-bit register for signal <C_OUT_sig>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <COUNTER05> synthesized.
+
+
+Synthesizing Unit <reg8>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+    Found 8-bit register for signal <data_out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <reg8> synthesized.
+
+
+Synthesizing Unit <cpu_control>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+WARNING:Xst:1305 - Output <CLK_OUT> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <SOD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <HOLD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <HOLDA> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <ACY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <RESETOUT> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <SID> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x36-bit ROM for signal <CONTROL_WORD$mux0002> created at line 1272.
+    Summary:
+	inferred   1 ROM(s).
+Unit <cpu_control> synthesized.
+
+
+Synthesizing Unit <TRI_ARR>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+    Found 8-bit tristate buffer for signal <data_out>.
+    Summary:
+	inferred   8 Tristate(s).
+Unit <TRI_ARR> synthesized.
+
+
+Synthesizing Unit <MUX2X1_VEC>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+Unit <MUX2X1_VEC> synthesized.
+
+
+Synthesizing Unit <FULLADD>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+    Found 8x2-bit ROM for signal <A$rom0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <FULLADD> synthesized.
+
+
+Synthesizing Unit <SP>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+    Found 16-bit register for signal <c_out_var>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <SP> synthesized.
+
+
+Synthesizing Unit <CELLPC>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+WARNING:Xst:1780 - Signal <net20> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <net16> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <net10> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <C_sig>.
+    Found 1-bit 4-to-1 multiplexer for signal <C_sig$mux0000> created at line 514.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CELLPC> synthesized.
+
+
+Synthesizing Unit <add_latch_high>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+WARNING:Xst:1780 - Signal <data_reg8_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <add_latch_high> synthesized.
+
+
+Synthesizing Unit <ADDER8>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+WARNING:Xst:1780 - Signal <cin_s<7:1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <ADDER8> synthesized.
+
+
+Synthesizing Unit <pcl>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+Unit <pcl> synthesized.
+
+
+Synthesizing Unit <pch>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+Unit <pch> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+WARNING:Xst:1305 - Output <cout> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <op_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <dat_out_var> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:646 - Signal <dat_b_n_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dat_a_n_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cout_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <SUM_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <B_in_s_r> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:646 - Signal <B_in_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <A_in_s_r> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:646 - Signal <A_in_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <REG_ARR>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+WARNING:Xst:646 - Signal <load_F> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16x14-bit ROM for signal <load_VECTOR$mux0001>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <REG_ARR> synthesized.
+
+
+Synthesizing Unit <cpu_8085>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
+WARNING:Xst:647 - Input <X1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <X2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <L_OUT_S> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <LOW_ADD> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <F_OUT_S<5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <F_OUT_S<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <F_OUT_S<1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <E_OUT_S> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <C_OUT_S> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <cnm>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <cpu_8085> synthesized.
+
+
+Synthesizing Unit <top_8085_with_mem>.
+    Related source file is "/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd".
+WARNING:Xst:646 - Signal <s1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <s0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <RESETOUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <INTA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <HOLDA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <CLK_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top_8085_with_mem> synthesized.
+
+WARNING:Xst:524 - All outputs of the instance <LOW_ADD_LATCH> of the block <trans_latch> are unconnected in block <cpu_8085>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 512x8-bit single-port RAM                             : 1
+# ROMs                                                 : 10
+ 16x14-bit ROM                                         : 1
+ 256x36-bit ROM                                        : 1
+ 8x2-bit ROM                                           : 8
+# Registers                                            : 53
+ 1-bit register                                        : 38
+ 8-bit register                                        : 15
+# Multiplexers                                         : 16
+ 1-bit 4-to-1 multiplexer                              : 16
+# Tristates                                            : 4
+ 8-bit tristate buffer                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <REG_T> is unconnected in block <cpu_i>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <G1[7].ADD1> is unconnected in block <A8_1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <G1[6].ADD1> is unconnected in block <A8_1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <G1[5].ADD1> is unconnected in block <A8_1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <G1[4].ADD1> is unconnected in block <A8_1>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <memory32k>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ram> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <dbg_wr>        | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <data>          |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+Unit <memory32k> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 512x8-bit single-port distributed RAM                 : 1
+# ROMs                                                 : 10
+ 16x14-bit ROM                                         : 1
+ 256x36-bit ROM                                        : 1
+ 8x2-bit ROM                                           : 8
+# Registers                                            : 158
+ Flip-Flops                                            : 158
+# Multiplexers                                         : 16
+ 1-bit 4-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:524 - All outputs of the instance <REG_T> of the block <reg8> are unconnected in block <cpu_8085>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:2042 - Unit memory32k: 8 internal tristates are replaced by logic (pull-up yes): data<0>, data<1>, data<2>, data<3>, data<4>, data<5>, data<6>, data<7>.
+WARNING:Xst:2042 - Unit TRI_ARR: 8 internal tristates are replaced by logic (pull-up yes): data_out<0>, data_out<1>, data_out<2>, data_out<3>, data_out<4>, data_out<5>, data_out<6>, data_out<7>.
+
+Optimizing unit <top_8085_with_mem> ...
+
+Optimizing unit <latch8> ...
+
+Optimizing unit <led_interface> ...
+
+Optimizing unit <trans_latch> ...
+
+Optimizing unit <COUNTER05> ...
+
+Optimizing unit <reg8> ...
+
+Optimizing unit <cpu_control> ...
+
+Optimizing unit <SP> ...
+
+Optimizing unit <add_latch_high> ...
+
+Optimizing unit <pcl> ...
+
+Optimizing unit <pch> ...
+
+Optimizing unit <REG_ARR> ...
+WARNING:Xst:1710 - FF/Latch <cpu_i/REGS_1/REG_F/data_out_0> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_1> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_2> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_3> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_4> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_7> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <cpu_i/REGS_1/REG_F/data_out_5> in Unit <top_8085_with_mem> is equivalent to the following FF/Latch, which will be removed : <cpu_i/REGS_1/REG_F/data_out_6> 
+Found area constraint ratio of 100 (+ 5) on block top_8085_with_mem, actual ratio is 53.
+FlipFlop cpu_i/COUNTER_1/C_OUT_sig_0 has been replicated 1 time(s)
+FlipFlop cpu_i/COUNTER_1/C_OUT_sig_1 has been replicated 1 time(s)
+FlipFlop cpu_i/COUNTER_1/C_OUT_sig_2 has been replicated 1 time(s)
+FlipFlop cpu_i/REG_ID/data_out_2 has been replicated 1 time(s)
+FlipFlop cpu_i/REG_ID/data_out_6 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 148
+ Flip-Flops                                            : 148
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_8085_with_mem.ngr
+Top Level Output File Name         : top_8085_with_mem
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 31
+
+Cell Usage :
+# BELS                             : 987
+#      GND                         : 1
+#      LUT2                        : 33
+#      LUT2_D                      : 6
+#      LUT2_L                      : 6
+#      LUT3                        : 215
+#      LUT3_D                      : 35
+#      LUT3_L                      : 13
+#      LUT4                        : 398
+#      LUT4_D                      : 57
+#      LUT4_L                      : 82
+#      MUXF5                       : 114
+#      MUXF6                       : 18
+#      MUXF7                       : 8
+#      VCC                         : 1
+# FlipFlops/Latches                : 148
+#      FD                          : 1
+#      FDC                         : 34
+#      FDCE                        : 105
+#      FDE                         : 8
+# RAMS                             : 128
+#      RAM32X1S                    : 128
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 1
+#      OBUF                        : 29
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100evq100-4 
+
+ Number of Slices:                      564  out of    960    58%  
+ Number of Slice Flip Flops:            148  out of   1920     7%  
+ Number of 4 input LUTs:               1101  out of   1920    57%  
+    Number used as logic:               845
+    Number used as RAMs:                256
+ Number of IOs:                          31
+ Number of bonded IOBs:                  31  out of     66    46%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 276   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset_n                            | IBUF                   | 139   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 17.487ns (Maximum Frequency: 57.184MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 21.101ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 17.487ns (frequency: 57.184MHz)
+  Total number of paths / destination ports: 3761046 / 1148
+-------------------------------------------------------------------------
+Delay:               17.487ns (Levels of Logic = 12)
+  Source:            cpu_i/COUNTER_1/C_OUT_sig_4 (FF)
+  Destination:       cpu_i/REGS_1/REG_PCH/G1[4].PC1/C_sig (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cpu_i/COUNTER_1/C_OUT_sig_4 to cpu_i/REGS_1/REG_PCH/G1[4].PC1/C_sig
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            33   0.591   1.298  cpu_i/COUNTER_1/C_OUT_sig_4 (cpu_i/COUNTER_1/C_OUT_sig_4)
+     LUT4_D:I2->O          8   0.704   0.792  cpu_i/CONTROL_1/CONTROL_WORD_cmp_eq003011 (cpu_i/CONTROL_1/N481)
+     LUT4:I2->O            5   0.704   0.668  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<9>24 (cpu_i/CONTROL_1/N131)
+     LUT4:I2->O            2   0.704   0.526  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<9>5 (cpu_i/CONTROL_1/N291)
+     LUT3:I1->O            4   0.704   0.591  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<1>111_SW1 (N441)
+     LUT4:I3->O            1   0.704   0.424  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<1>11_SW1 (N631)
+     LUT4:I3->O           50   0.704   1.303  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<2>26 (cpu_i/SEL_OUT<0>)
+     LUT3:I2->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<4>55_SW0_SW0 (N505)
+     LUT4:I3->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<4>55 (cpu_i/REGS_1/DAT_OUT<4>55)
+     LUT4_L:I3->LO         1   0.704   0.135  cpu_i/REGS_1/DAT_OUT<4>56 (cpu_i/REGS_1/DAT_OUT<4>56)
+     LUT4:I2->O            4   0.704   0.591  cpu_i/REGS_1/DAT_OUT<4>90 (cpu_i/REG_ARR_OUT_BUS<4>)
+     LUT4:I3->O           12   0.704   0.965  cpu_i/INSIDE_BUS<4>LogicTrst (cpu_i/INSIDE_BUS<4>)
+     LUT4:I3->O            1   0.704   0.000  cpu_i/REGS_1/REG_PCL/G1[4].PC1/Mmux_C_sig_mux00003 (cpu_i/REGS_1/REG_PCL/G1[4].PC1/C_sig_mux0000)
+     FDC:D                     0.308          cpu_i/REGS_1/REG_PCL/G1[4].PC1/C_sig
+    ----------------------------------------
+    Total                     17.487ns (9.347ns logic, 8.140ns route)
+                                       (53.4% logic, 46.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 93216 / 28
+-------------------------------------------------------------------------
+Offset:              21.101ns (Levels of Logic = 13)
+  Source:            cpu_i/COUNTER_1/C_OUT_sig_4 (FF)
+  Destination:       dbg_db<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cpu_i/COUNTER_1/C_OUT_sig_4 to dbg_db<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            33   0.591   1.298  cpu_i/COUNTER_1/C_OUT_sig_4 (cpu_i/COUNTER_1/C_OUT_sig_4)
+     LUT4_D:I2->O          8   0.704   0.792  cpu_i/CONTROL_1/CONTROL_WORD_cmp_eq003011 (cpu_i/CONTROL_1/N481)
+     LUT4:I2->O            5   0.704   0.668  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<9>24 (cpu_i/CONTROL_1/N131)
+     LUT4:I2->O            2   0.704   0.526  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<9>5 (cpu_i/CONTROL_1/N291)
+     LUT3:I1->O            4   0.704   0.591  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<1>111_SW1 (N441)
+     LUT4:I3->O            1   0.704   0.424  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<1>11_SW1 (N631)
+     LUT4:I3->O           50   0.704   1.303  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<2>26 (cpu_i/SEL_OUT<0>)
+     LUT3:I2->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<4>55_SW0_SW0 (N505)
+     LUT4:I3->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<4>55 (cpu_i/REGS_1/DAT_OUT<4>55)
+     LUT4_L:I3->LO         1   0.704   0.135  cpu_i/REGS_1/DAT_OUT<4>56 (cpu_i/REGS_1/DAT_OUT<4>56)
+     LUT4:I2->O            4   0.704   0.587  cpu_i/REGS_1/DAT_OUT<4>90 (cpu_i/REG_ARR_OUT_BUS<4>)
+     MUXF5:S->O           19   0.739   1.164  data_bus<4>LogicTrst (data_bus<4>)
+     LUT3:I1->O            1   0.704   0.420  ram_i/dbg_db<4>1 (dbg_db_4_OBUF)
+     OBUF:I->O                 3.272          dbg_db_4_OBUF (dbg_db<4>)
+    ----------------------------------------
+    Total                     21.101ns (12.346ns logic, 8.755ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 2.84 secs
+ 
+--> 
+
+
+Total memory usage is 633424 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   60 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

@@ -1,0 +1,5 @@
+vhdl isim_temp "memory32k.vhd"
+vhdl isim_temp "led_interface.vhd"
+vhdl isim_temp "latch8.vhd"
+vhdl isim_temp "cpu_8085.vhd"
+vhdl isim_temp "top_8085_with_mem.vhd"
