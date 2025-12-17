@@ -2,4 +2,5 @@ vhdl work "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_808
 vhdl work "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd"
 vhdl work "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd"
 vhdl work "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd"
+vhdl work "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/clk_divider.vhd"
 vhdl work "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd"

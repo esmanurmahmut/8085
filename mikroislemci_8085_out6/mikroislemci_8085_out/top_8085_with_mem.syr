@@ -107,6 +107,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/clk_divider.vhd" in Library work.
+Entity <clk_divider> compiled.
+Entity <clk_divider> (Architecture <rtl>) compiled.
 Compiling vhdl file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" in Library work.
 Entity <reg8> compiled.
 Entity <reg8> (Architecture <behav>) compiled.
@@ -143,16 +146,20 @@ Entity <cpu_8085> (Architecture <behav>) compiled.
 Compiling vhdl file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd" in Library work.
 Architecture rtl of Entity latch8 is up to date.
 Compiling vhdl file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/memory32k.vhd" in Library work.
-Architecture rtl of Entity memory32k is up to date.
+Entity <memory32k> compiled.
+Entity <memory32k> (Architecture <rtl>) compiled.
 Compiling vhdl file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd" in Library work.
 Architecture behavioral of Entity led_interface is up to date.
 Compiling vhdl file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" in Library work.
-Architecture rtl of Entity top_8085_with_mem is up to date.
+Entity <top_8085_with_mem> compiled.
+Entity <top_8085_with_mem> (Architecture <rtl>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <top_8085_with_mem> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <clk_divider> in library <work> (architecture <rtl>).
 
 Analyzing hierarchy for entity <cpu_8085> in library <work> (architecture <behav>).
 
@@ -212,6 +219,9 @@ Analyzing hierarchy for entity <CELLPC> in library <work> (architecture <behav>)
 Analyzing Entity <top_8085_with_mem> in library <work> (Architecture <rtl>).
 Entity <top_8085_with_mem> analyzed. Unit <top_8085_with_mem> generated.
 
+Analyzing Entity <clk_divider> in library <work> (Architecture <rtl>).
+Entity <clk_divider> analyzed. Unit <clk_divider> generated.
+
 Analyzing Entity <cpu_8085> in library <work> (Architecture <behav>).
 Entity <cpu_8085> analyzed. Unit <cpu_8085> generated.
 
@@ -233,6 +243,8 @@ Entity <reg8> analyzed. Unit <reg8> generated.
 Analyzing generic Entity <alu> in library <work> (Architecture <behav>).
 	n = 7
 	s = 3
+WARNING:Xst:819 - "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" line 450: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <cin>, <dat_b_n_s>, <dat_a_n_s>
 Entity <alu> analyzed. Unit <alu> generated.
 
 Analyzing generic Entity <ADDER8> in library <work> (Architecture <struct>).
@@ -246,7 +258,7 @@ Entity <FULLADD> analyzed. Unit <FULLADD> generated.
 Analyzing generic Entity <REG_ARR> in library <work> (Architecture <behav>).
 	n = 7
 	s = 4
-WARNING:Xst:819 - "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" line 818: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" line 884: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <dat_out_regA>, <dat_out_regF>, <dat_out_regB>, <dat_out_regC>, <dat_out_regD>, <dat_out_regE>, <dat_out_regH>, <dat_out_regL>, <dat_out_regSPL>, <dat_out_regSPH>, <dat_out_regPCL>, <dat_out_regPCH>, <dat_out_regW>, <dat_out_regZ>
 Entity <REG_ARR> analyzed. Unit <REG_ARR> generated.
 
@@ -288,6 +300,17 @@ Entity <led_interface> analyzed. Unit <led_interface> generated.
 =========================================================================
 
 Performing bidirectional port resolution...
+
+Synthesizing Unit <clk_divider>.
+    Related source file is "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/clk_divider.vhd".
+    Found 1-bit register for signal <clk_toggle>.
+    Found 5-bit register for signal <counter>.
+    Found 5-bit adder for signal <counter$share0000>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clk_divider> synthesized.
+
 
 Synthesizing Unit <latch8>.
     Related source file is "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd".
@@ -349,9 +372,6 @@ WARNING:Xst:1305 - Output <HOLDA> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <ACY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <RESETOUT> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <SID> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 256x36-bit ROM for signal <CONTROL_WORD$mux0002> created at line 1270.
-    Summary:
-	inferred   1 ROM(s).
 Unit <cpu_control> synthesized.
 
 
@@ -390,7 +410,7 @@ WARNING:Xst:1780 - Signal <net20> is never used or assigned. This unconnected si
 WARNING:Xst:1780 - Signal <net16> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <net10> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <C_sig>.
-    Found 1-bit 4-to-1 multiplexer for signal <C_sig$mux0000> created at line 512.
+    Found 1-bit 4-to-1 multiplexer for signal <C_sig$mux0000> created at line 578.
     Summary:
 	inferred   1 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
@@ -421,17 +441,18 @@ Unit <pch> synthesized.
 
 Synthesizing Unit <alu>.
     Related source file is "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd".
-WARNING:Xst:1305 - Output <cout> is never assigned. Tied to value 0.
-WARNING:Xst:647 - Input <op_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <dat_out_var> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:646 - Signal <dat_b_n_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <dat_a_n_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <cout_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <SUM_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <B_in_s_r> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:646 - Signal <B_in_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <A_in_s_r> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:646 - Signal <A_in_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:736 - Found 8-bit latch for signal <dat_out_var$mux0000> created at line 477. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <B_in_s_r>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <cin_arith>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <A_in_s_r>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit xor8 for signal <PARITY>.
+    Found 8-bit xor2 for signal <dat_out_var$xor0000> created at line 462.
+    Summary:
+	inferred   1 Xor(s).
 Unit <alu> synthesized.
 
 
@@ -471,6 +492,7 @@ WARNING:Xst:646 - Signal <HOLDA> is assigned but never used. This unconnected si
 WARNING:Xst:646 - Signal <CLK_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <top_8085_with_mem> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 WARNING:Xst:524 - All outputs of the instance <LOW_ADD_LATCH> of the block <trans_latch> are unconnected in block <cpu_8085>.
    This instance will be removed from the design along with all underlying logic
 
@@ -480,17 +502,25 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  512x8-bit single-port RAM                             : 1
-# ROMs                                                 : 10
+# ROMs                                                 : 9
  16x14-bit ROM                                         : 1
- 256x36-bit ROM                                        : 1
  8x2-bit ROM                                           : 8
-# Registers                                            : 53
- 1-bit register                                        : 38
+# Adders/Subtractors                                   : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 55
+ 1-bit register                                        : 39
+ 5-bit register                                        : 1
  8-bit register                                        : 15
+# Latches                                              : 4
+ 1-bit latch                                           : 1
+ 8-bit latch                                           : 3
 # Multiplexers                                         : 16
  1-bit 4-to-1 multiplexer                              : 16
 # Tristates                                            : 4
  8-bit tristate buffer                                 : 4
+# Xors                                                 : 2
+ 1-bit xor8                                            : 1
+ 8-bit xor2                                            : 1
 
 =========================================================================
 
@@ -498,20 +528,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <REG_T> is unconnected in block <cpu_i>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <G1[7].ADD1> is unconnected in block <A8_1>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <G1[6].ADD1> is unconnected in block <A8_1>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <G1[5].ADD1> is unconnected in block <A8_1>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <G1[4].ADD1> is unconnected in block <A8_1>.
-   It will be removed from the design.
-WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <REG_F>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <memory32k>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ram> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -534,26 +550,35 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  512x8-bit single-port distributed RAM                 : 1
-# ROMs                                                 : 10
+# ROMs                                                 : 9
  16x14-bit ROM                                         : 1
- 256x36-bit ROM                                        : 1
  8x2-bit ROM                                           : 8
-# Registers                                            : 158
- Flip-Flops                                            : 158
+# Adders/Subtractors                                   : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 164
+ Flip-Flops                                            : 164
+# Latches                                              : 4
+ 1-bit latch                                           : 1
+ 8-bit latch                                           : 3
 # Multiplexers                                         : 16
  1-bit 4-to-1 multiplexer                              : 16
+# Xors                                                 : 2
+ 1-bit xor8                                            : 1
+ 8-bit xor2                                            : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:524 - All outputs of the instance <REG_T> of the block <reg8> are unconnected in block <cpu_8085>.
-   This instance will be removed from the design along with all underlying logic
 WARNING:Xst:2042 - Unit memory32k: 8 internal tristates are replaced by logic (pull-up yes): data<0>, data<1>, data<2>, data<3>, data<4>, data<5>, data<6>, data<7>.
 WARNING:Xst:2042 - Unit TRI_ARR: 8 internal tristates are replaced by logic (pull-up yes): data_out<0>, data_out<1>, data_out<2>, data_out<3>, data_out<4>, data_out<5>, data_out<6>, data_out<7>.
 
 Optimizing unit <top_8085_with_mem> ...
+
+Optimizing unit <cpu_control> ...
+
+Optimizing unit <clk_divider> ...
 
 Optimizing unit <latch8> ...
 
@@ -565,40 +590,31 @@ Optimizing unit <COUNTER05> ...
 
 Optimizing unit <reg8> ...
 
-Optimizing unit <cpu_control> ...
-
 Optimizing unit <SP> ...
 
 Optimizing unit <add_latch_high> ...
+
+Optimizing unit <ADDER8> ...
 
 Optimizing unit <pcl> ...
 
 Optimizing unit <pch> ...
 
+Optimizing unit <alu> ...
+
 Optimizing unit <REG_ARR> ...
-WARNING:Xst:1710 - FF/Latch <cpu_i/REGS_1/REG_F/data_out_0> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_1> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_2> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_3> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_4> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_i/REGS_1/REG_F/data_out_7> (without init value) has a constant value of 0 in block <top_8085_with_mem>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <cpu_i/REGS_1/REG_F/data_out_3> in Unit <top_8085_with_mem> is equivalent to the following FF/Latch, which will be removed : <cpu_i/REGS_1/REG_F/data_out_4> 
 INFO:Xst:2261 - The FF/Latch <cpu_i/REGS_1/REG_F/data_out_5> in Unit <top_8085_with_mem> is equivalent to the following FF/Latch, which will be removed : <cpu_i/REGS_1/REG_F/data_out_6> 
-Found area constraint ratio of 100 (+ 5) on block top_8085_with_mem, actual ratio is 55.
-FlipFlop cpu_i/COUNTER_1/C_OUT_sig_0 has been replicated 1 time(s)
-FlipFlop cpu_i/COUNTER_1/C_OUT_sig_1 has been replicated 1 time(s)
-FlipFlop cpu_i/COUNTER_1/C_OUT_sig_2 has been replicated 1 time(s)
-FlipFlop cpu_i/COUNTER_1/C_OUT_sig_3 has been replicated 2 time(s)
-FlipFlop cpu_i/COUNTER_1/C_OUT_sig_4 has been replicated 1 time(s)
+INFO:Xst:2261 - The FF/Latch <cpu_i/REGS_1/REG_F/data_out_1> in Unit <top_8085_with_mem> is equivalent to the following FF/Latch, which will be removed : <cpu_i/REGS_1/REG_F/data_out_2> 
+Found area constraint ratio of 100 (+ 5) on block top_8085_with_mem, actual ratio is 67.
 FlipFlop cpu_i/REG_ID/data_out_0 has been replicated 1 time(s)
 FlipFlop cpu_i/REG_ID/data_out_1 has been replicated 1 time(s)
-FlipFlop cpu_i/REG_ID/data_out_2 has been replicated 1 time(s)
-FlipFlop cpu_i/REG_ID/data_out_3 has been replicated 1 time(s)
-FlipFlop cpu_i/REG_ID/data_out_4 has been replicated 1 time(s)
+FlipFlop cpu_i/REG_ID/data_out_4 has been replicated 2 time(s)
+FlipFlop cpu_i/REG_ID/data_out_5 has been replicated 2 time(s)
 FlipFlop cpu_i/REG_ID/data_out_6 has been replicated 1 time(s)
-FlipFlop cpu_i/REG_ID/data_out_7 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -606,8 +622,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 156
- Flip-Flops                                            : 156
+# Registers                                            : 168
+ Flip-Flops                                            : 168
 
 =========================================================================
 
@@ -636,29 +652,32 @@ Design Statistics
 # IOs                              : 31
 
 Cell Usage :
-# BELS                             : 1045
+# BELS                             : 1139
 #      GND                         : 1
-#      LUT2                        : 31
-#      LUT2_D                      : 10
-#      LUT2_L                      : 8
-#      LUT3                        : 191
-#      LUT3_D                      : 48
-#      LUT3_L                      : 14
-#      LUT4                        : 456
-#      LUT4_D                      : 78
-#      LUT4_L                      : 103
-#      MUXF5                       : 79
+#      INV                         : 5
+#      LUT2                        : 63
+#      LUT2_D                      : 6
+#      LUT2_L                      : 2
+#      LUT3                        : 250
+#      LUT3_D                      : 12
+#      LUT3_L                      : 15
+#      LUT4                        : 500
+#      LUT4_D                      : 41
+#      LUT4_L                      : 59
+#      MUXF5                       : 158
 #      MUXF6                       : 17
-#      MUXF7                       : 8
+#      MUXF7                       : 9
 #      VCC                         : 1
-# FlipFlops/Latches                : 156
+# FlipFlops/Latches                : 193
 #      FD                          : 1
-#      FDC                         : 34
-#      FDCE                        : 113
+#      FDC                         : 38
+#      FDCE                        : 121
 #      FDE                         : 8
+#      LD                          : 25
 # RAMS                             : 128
 #      RAM32X1S                    : 128
-# Clock Buffers                    : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 30
 #      IBUF                        : 1
@@ -670,14 +689,14 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-4 
 
- Number of Slices:                      615  out of    960    64%  
- Number of Slice Flip Flops:            156  out of   1920     8%  
- Number of 4 input LUTs:               1195  out of   1920    62%  
-    Number used as logic:               939
+ Number of Slices:                      623  out of    960    64%  
+ Number of Slice Flip Flops:            193  out of   1920    10%  
+ Number of 4 input LUTs:               1209  out of   1920    62%  
+    Number used as logic:               953
     Number used as RAMs:                256
  Number of IOs:                          31
  Number of bonded IOBs:                  31  out of     66    46%  
- Number of GCLKs:                         1  out of     24     4%  
+ Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
 Partition Resource Summary:
@@ -697,27 +716,35 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 284   |
------------------------------------+------------------------+-------+
+-----------------------------------------------------------------+-------------------------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)                     | Load  |
+-----------------------------------------------------------------+-------------------------------------------+-------+
+clk_div_i/clk_toggle1                                            | BUFG                                      | 290   |
+clk                                                              | BUFGP                                     | 6     |
+cpu_i/ALU_1/dat_out_var_or0000(cpu_i/ALU_1/dat_out_var_or00001:O)| NONE(*)(cpu_i/ALU_1/dat_out_var_mux0000_7)| 9     |
+cpu_i/ALU_1/A_in_s_r_or0000(cpu_i/ALU_1/A_in_s_r_or00001:O)      | NONE(*)(cpu_i/ALU_1/B_in_s_r_7)           | 16    |
+-----------------------------------------------------------------+-------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+------------------------+-------+
-Control Signal                     | Buffer(FF name)        | Load  |
------------------------------------+------------------------+-------+
-reset_n                            | IBUF                   | 147   |
------------------------------------+------------------------+-------+
+-----------------------------------------------------+---------------------------+-------+
+Control Signal                                       | Buffer(FF name)           | Load  |
+-----------------------------------------------------+---------------------------+-------+
+reset_n                                              | IBUF                      | 153   |
+clk_div_i/reset_n_inv(clk_div_i/reset_n_inv1_INV_0:O)| NONE(clk_div_i/clk_toggle)| 6     |
+-----------------------------------------------------+---------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 16.733ns (Maximum Frequency: 59.763MHz)
+   Minimum period: 29.095ns (Maximum Frequency: 34.370MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 20.516ns
+   Maximum output required time after clock: 21.377ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -725,83 +752,158 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 16.733ns (frequency: 59.763MHz)
-  Total number of paths / destination ports: 4030564 / 1164
+Timing constraint: Default period analysis for Clock 'clk_div_i/clk_toggle1'
+  Clock period: 29.095ns (frequency: 34.370MHz)
+  Total number of paths / destination ports: 3055431 / 1174
 -------------------------------------------------------------------------
-Delay:               16.733ns (Levels of Logic = 13)
-  Source:            cpu_i/REG_ID/data_out_1 (FF)
-  Destination:       cpu_i/REGS_1/REG_PCH/G1[6].PC1/C_sig (FF)
+Delay:               14.548ns (Levels of Logic = 11)
+  Source:            cpu_i/REG_ID/data_out_0 (FF)
+  Destination:       cpu_i/REG_T/data_out_7 (FF)
+  Source Clock:      clk_div_i/clk_toggle1 rising
+  Destination Clock: clk_div_i/clk_toggle1 falling
+
+  Data Path: cpu_i/REG_ID/data_out_0 to cpu_i/REG_T/data_out_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            43   0.591   1.270  cpu_i/REG_ID/data_out_0 (cpu_i/REG_ID/data_out_0)
+     LUT4_D:I3->O          4   0.704   0.591  cpu_i/CONTROL_1/ALE161 (cpu_i/CONTROL_1/ALE_bdd32)
+     LUT4:I3->O            1   0.704   0.000  cpu_i/CONTROL_1/SEL_OUT<2>51_F (N482)
+     MUXF5:I0->O           2   0.321   0.482  cpu_i/CONTROL_1/SEL_OUT<2>51 (cpu_i/CONTROL_1/SEL_OUT<2>_bdd12)
+     LUT4:I2->O            1   0.704   0.499  cpu_i/CONTROL_1/SEL_OUT<2>205_G (N535)
+     LUT4:I1->O            1   0.704   0.000  cpu_i/CONTROL_1/SEL_OUT<2>249_G (N707)
+     MUXF5:I1->O           1   0.321   0.424  cpu_i/CONTROL_1/SEL_OUT<2>249 (cpu_i/CONTROL_1/SEL_OUT<2>249)
+     LUT4:I3->O           18   0.704   1.103  cpu_i/CONTROL_1/SEL_OUT<2>279 (cpu_i/CONTROL_1/SEL_OUT<2>279)
+     LUT4:I2->O           17   0.704   1.055  cpu_i/CONTROL_1/SEL_OUT<2>486 (cpu_i/SEL_OUT<2>)
+     LUT4:I3->O            8   0.704   0.792  cpu_i/REGS_1/DAT_OUT_cmp_eq00121 (cpu_i/REGS_1/DAT_OUT_cmp_eq0012)
+     LUT4:I2->O            1   0.704   0.455  cpu_i/REGS_1/DAT_OUT<7>63 (cpu_i/REGS_1/DAT_OUT<7>63)
+     LUT4:I2->O            3   0.704   0.000  cpu_i/REGS_1/DAT_OUT<7>98 (cpu_i/REG_ARR_OUT_BUS<7>)
+     FDCE:D                    0.308          cpu_i/REG_T/data_out_7
+    ----------------------------------------
+    Total                     14.548ns (7.877ns logic, 6.671ns route)
+                                       (54.1% logic, 45.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.087ns (frequency: 196.580MHz)
+  Total number of paths / destination ports: 61 / 7
+-------------------------------------------------------------------------
+Delay:               5.087ns (Levels of Logic = 3)
+  Source:            clk_div_i/counter_1 (FF)
+  Destination:       clk_div_i/counter_4 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: cpu_i/REG_ID/data_out_1 to cpu_i/REGS_1/REG_PCH/G1[6].PC1/C_sig
+  Data Path: clk_div_i/counter_1 to clk_div_i/counter_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            43   0.591   1.345  cpu_i/REG_ID/data_out_1 (cpu_i/REG_ID/data_out_1)
-     LUT4_D:I1->O          2   0.704   0.482  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002131 (cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux000213)
-     LUT3:I2->O            1   0.704   0.000  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f51 (cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f51)
-     MUXF5:I1->O           1   0.321   0.000  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f5 (cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f5)
-     MUXF6:I1->O           1   0.521   0.424  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_2_f6 (cpu_i/CONTROL_1/N5)
-     LUT4:I3->O            8   0.704   0.792  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<3>9 (cpu_i/CONTROL_1/CONTROL_WORD_mux0001<3>9)
-     LUT4:I2->O           16   0.704   1.038  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<3>270_SW0 (N153)
-     LUT4_D:I3->O          5   0.704   0.637  cpu_i/REGS_1/DAT_OUT<3>27_SW0_SW0 (N782)
-     LUT4:I3->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<6>27_SW0 (N379)
-     LUT4_L:I3->LO         1   0.704   0.104  cpu_i/REGS_1/DAT_OUT<6>27 (cpu_i/REGS_1/DAT_OUT<6>27)
-     LUT4:I3->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<6>37 (cpu_i/REGS_1/DAT_OUT<6>37)
-     LUT4:I3->O            4   0.704   0.591  cpu_i/REGS_1/DAT_OUT<6>98 (cpu_i/REG_ARR_OUT_BUS<6>)
-     LUT4:I3->O           13   0.704   0.987  cpu_i/INSIDE_BUS<6>LogicTrst (cpu_i/INSIDE_BUS<6>)
-     LUT4:I3->O            1   0.704   0.000  cpu_i/REGS_1/REG_PCL/G1[6].PC1/Mmux_C_sig_mux000031 (cpu_i/REGS_1/REG_PCL/G1[6].PC1/C_sig_mux0000)
-     FDC:D                     0.308          cpu_i/REGS_1/REG_PCL/G1[6].PC1/C_sig
+     FDC:C->Q              6   0.591   0.844  clk_div_i/counter_1 (clk_div_i/counter_1)
+     LUT4:I0->O            2   0.704   0.526  clk_div_i/counter_mux0003<0>1_SW1 (N3)
+     LUT4:I1->O            3   0.704   0.706  clk_div_i/counter_mux0003<0>1 (clk_div_i/N01)
+     LUT4:I0->O            1   0.704   0.000  clk_div_i/counter_mux0003<2>1 (clk_div_i/counter_mux0003<2>)
+     FDC:D                     0.308          clk_div_i/counter_2
     ----------------------------------------
-    Total                     16.733ns (9.485ns logic, 7.248ns route)
-                                       (56.7% logic, 43.3% route)
+    Total                      5.087ns (3.011ns logic, 2.076ns route)
+                                       (59.2% logic, 40.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 109030 / 28
+Timing constraint: Default period analysis for Clock 'cpu_i/ALU_1/dat_out_var_or0000'
+  Clock period: 12.132ns (frequency: 82.427MHz)
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              20.516ns (Levels of Logic = 14)
-  Source:            cpu_i/REG_ID/data_out_1 (FF)
-  Destination:       dbg_db<5> (PAD)
-  Source Clock:      clk rising
+Delay:               12.132ns (Levels of Logic = 9)
+  Source:            cpu_i/ALU_1/cin_arith (LATCH)
+  Destination:       cpu_i/ALU_1/dat_out_var_mux0000_7 (LATCH)
+  Source Clock:      cpu_i/ALU_1/dat_out_var_or0000 falling
+  Destination Clock: cpu_i/ALU_1/dat_out_var_or0000 falling
 
-  Data Path: cpu_i/REG_ID/data_out_1 to dbg_db<5>
+  Data Path: cpu_i/ALU_1/cin_arith to cpu_i/ALU_1/dat_out_var_mux0000_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            43   0.591   1.345  cpu_i/REG_ID/data_out_1 (cpu_i/REG_ID/data_out_1)
-     LUT4_D:I1->O          2   0.704   0.482  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002131 (cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux000213)
-     LUT3:I2->O            1   0.704   0.000  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f51 (cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f51)
-     MUXF5:I1->O           1   0.321   0.000  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f5 (cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_3_f5)
-     MUXF6:I1->O           1   0.521   0.424  cpu_i/CONTROL_1/Mrom_CONTROL_WORD_mux0002191_2_f6 (cpu_i/CONTROL_1/N5)
-     LUT4:I3->O            8   0.704   0.792  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<3>9 (cpu_i/CONTROL_1/CONTROL_WORD_mux0001<3>9)
-     LUT4:I2->O           16   0.704   1.038  cpu_i/CONTROL_1/CONTROL_WORD_mux0001<3>270_SW0 (N153)
-     LUT4:I3->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<6>5_SW0_SW1 (N970)
-     LUT4_D:I3->O          1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<6>5_SW0 (N370)
-     LUT4:I3->O            1   0.704   0.595  cpu_i/REGS_1/DAT_OUT<5>5 (cpu_i/REGS_1/DAT_OUT<5>5)
-     LUT4:I0->O            1   0.704   0.424  cpu_i/REGS_1/DAT_OUT<5>37 (cpu_i/REGS_1/DAT_OUT<5>37)
-     LUT4_D:I3->O          3   0.704   0.535  cpu_i/REGS_1/DAT_OUT<5>98 (cpu_i/REG_ARR_OUT_BUS<5>)
-     LUT4:I3->O           19   0.704   1.164  data_bus<5>LogicTrst (data_bus<5>)
-     LUT3:I1->O            1   0.704   0.420  ram_i/dbg_db<5>1 (dbg_db_5_OBUF)
-     OBUF:I->O                 3.272          dbg_db_5_OBUF (dbg_db<5>)
+     LD:G->Q               2   0.676   0.526  cpu_i/ALU_1/cin_arith (cpu_i/ALU_1/cin_arith)
+     LUT3:I1->O            2   0.704   0.622  cpu_i/ALU_1/A8_1/ADD0/Mrom_A_rom0000111 (cpu_i/ALU_1/A8_1/ADD0/Mrom_A_rom00001)
+     LUT3:I0->O            2   0.704   0.526  cpu_i/ALU_1/A8_1/G1[1].ADD1/Mrom_A_rom0000111 (cpu_i/ALU_1/A8_1/G1[1].ADD1/Mrom_A_rom00001)
+     LUT3:I1->O            2   0.704   0.526  cpu_i/ALU_1/A8_1/G1[2].ADD1/Mrom_A_rom0000111 (cpu_i/ALU_1/A8_1/G1[2].ADD1/Mrom_A_rom00001)
+     LUT3:I1->O            3   0.704   0.610  cpu_i/ALU_1/A8_1/G1[3].ADD1/Mrom_A_rom0000111 (cpu_i/ACY_S)
+     LUT3:I1->O            2   0.704   0.526  cpu_i/ALU_1/A8_1/G1[4].ADD1/Mrom_A_rom0000111 (cpu_i/ALU_1/A8_1/G1[4].ADD1/Mrom_A_rom00001)
+     LUT3:I1->O            2   0.704   0.526  cpu_i/ALU_1/A8_1/G1[5].ADD1/Mrom_A_rom0000111 (cpu_i/ALU_1/A8_1/G1[5].ADD1/Mrom_A_rom00001)
+     LUT3:I1->O            2   0.704   0.451  cpu_i/ALU_1/A8_1/G1[6].ADD1/Mrom_A_rom0000111 (cpu_i/ALU_1/A8_1/G1[6].ADD1/Mrom_A_rom00001)
+     LUT4:I3->O            1   0.704   0.499  cpu_i/ALU_1/dat_out_var_mux0001<7>133 (cpu_i/ALU_1/dat_out_var_mux0001<7>133)
+     LUT2:I1->O            1   0.704   0.000  cpu_i/ALU_1/dat_out_var_mux0001<7>134 (cpu_i/ALU_1/dat_out_var_mux0001<7>)
+     LD:D                      0.308          cpu_i/ALU_1/dat_out_var_mux0000_7
     ----------------------------------------
-    Total                     20.516ns (12.449ns logic, 8.067ns route)
-                                       (60.7% logic, 39.3% route)
+    Total                     12.132ns (7.320ns logic, 4.812ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_div_i/clk_toggle1'
+  Total number of paths / destination ports: 64573 / 28
+-------------------------------------------------------------------------
+Offset:              21.377ns (Levels of Logic = 15)
+  Source:            cpu_i/REG_ID/data_out_0 (FF)
+  Destination:       dbg_db<7> (PAD)
+  Source Clock:      clk_div_i/clk_toggle1 rising
+
+  Data Path: cpu_i/REG_ID/data_out_0 to dbg_db<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            43   0.591   1.270  cpu_i/REG_ID/data_out_0 (cpu_i/REG_ID/data_out_0)
+     LUT4_D:I3->O          4   0.704   0.591  cpu_i/CONTROL_1/ALE161 (cpu_i/CONTROL_1/ALE_bdd32)
+     LUT4:I3->O            1   0.704   0.000  cpu_i/CONTROL_1/SEL_OUT<2>51_F (N482)
+     MUXF5:I0->O           2   0.321   0.482  cpu_i/CONTROL_1/SEL_OUT<2>51 (cpu_i/CONTROL_1/SEL_OUT<2>_bdd12)
+     LUT4:I2->O            1   0.704   0.499  cpu_i/CONTROL_1/SEL_OUT<2>205_G (N535)
+     LUT4:I1->O            1   0.704   0.000  cpu_i/CONTROL_1/SEL_OUT<2>249_G (N707)
+     MUXF5:I1->O           1   0.321   0.424  cpu_i/CONTROL_1/SEL_OUT<2>249 (cpu_i/CONTROL_1/SEL_OUT<2>249)
+     LUT4:I3->O           18   0.704   1.103  cpu_i/CONTROL_1/SEL_OUT<2>279 (cpu_i/CONTROL_1/SEL_OUT<2>279)
+     LUT4:I2->O           17   0.704   1.055  cpu_i/CONTROL_1/SEL_OUT<2>486 (cpu_i/SEL_OUT<2>)
+     LUT4:I3->O            8   0.704   0.792  cpu_i/REGS_1/DAT_OUT_cmp_eq00121 (cpu_i/REGS_1/DAT_OUT_cmp_eq0012)
+     LUT4:I2->O            1   0.704   0.455  cpu_i/REGS_1/DAT_OUT<7>63 (cpu_i/REGS_1/DAT_OUT<7>63)
+     LUT4:I2->O            3   0.704   0.535  cpu_i/REGS_1/DAT_OUT<7>98 (cpu_i/REG_ARR_OUT_BUS<7>)
+     LUT4:I3->O            1   0.704   0.000  data_bus<7>LogicTrst231 (data_bus<7>LogicTrst23)
+     MUXF5:I1->O          20   0.321   1.181  data_bus<7>LogicTrst23_f5 (data_bus<7>)
+     LUT4:I1->O            1   0.704   0.420  ram_i/dbg_db<7>1 (dbg_db_7_OBUF)
+     OBUF:I->O                 3.272          dbg_db_7_OBUF (dbg_db<7>)
+    ----------------------------------------
+    Total                     21.377ns (12.570ns logic, 8.807ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpu_i/ALU_1/dat_out_var_or0000'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              7.915ns (Levels of Logic = 4)
+  Source:            cpu_i/ALU_1/dat_out_var_mux0000_7 (LATCH)
+  Destination:       dbg_db<7> (PAD)
+  Source Clock:      cpu_i/ALU_1/dat_out_var_or0000 falling
+
+  Data Path: cpu_i/ALU_1/dat_out_var_mux0000_7 to dbg_db<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.676   0.637  cpu_i/ALU_1/dat_out_var_mux0000_7 (cpu_i/ALU_1/dat_out_var_mux0000_7)
+     LUT4:I3->O            1   0.704   0.000  data_bus<7>LogicTrst232 (data_bus<7>LogicTrst231)
+     MUXF5:I0->O          20   0.321   1.181  data_bus<7>LogicTrst23_f5 (data_bus<7>)
+     LUT4:I1->O            1   0.704   0.420  ram_i/dbg_db<7>1 (dbg_db_7_OBUF)
+     OBUF:I->O                 3.272          dbg_db_7_OBUF (dbg_db<7>)
+    ----------------------------------------
+    Total                      7.915ns (5.677ns logic, 2.238ns route)
+                                       (71.7% logic, 28.3% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 3.00 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 3.36 secs
  
 --> 
 
 
-Total memory usage is 636596 kilobytes
+Total memory usage is 641036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   60 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

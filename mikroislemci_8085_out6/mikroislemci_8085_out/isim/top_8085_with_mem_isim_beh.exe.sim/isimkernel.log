@@ -2,29 +2,9 @@ Command line:
    top_8085_with_mem_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  35850
+     -socket  37466
 
-Thu Dec 11 15:10:01 2025
+Fri Dec 12 12:12:50 2025
 
 
- Elaboration Time: 0.1 sec
-
- Current Memory Usage: 201.486 Meg
-
- Total Signals          : 581
- Total Nets             : 4769
- Total Signal Drivers   : 188
- Total Blocks           : 81
- Total Primitive Blocks : 52
- Total Processes        : 138
- Total Traceable Variables  : 59
- Total Scalar Nets and Variables : 5321
-Total Line Count : 889
-Total Line Count : 889
-
- Total Simulation Time: 0.19 sec
-
- Current Memory Usage: 279.085 Meg
-
-Thu Dec 11 15:14:28 2025
-
+ Elaboration Time: 0.11 sec

@@ -370,105 +370,171 @@ end struct ;
 ------------------------------------------------------------ 
 --DESIGN alu BEGINS here 
 ------------------------------------------------------------ 
-library ieee; 
-use ieee.std_logic_1164.all; 
+library ieee;
+
+use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all ; 
 
-entity alu is 
-      generic ( n : integer := 7 ; 
-                s : integer := 3) ; 
-      port(dat_a  : in std_logic_vector(n downto 0); 
-           dat_b  : in std_logic_vector(n downto 0); 
-           dat_out: out std_logic_vector(n downto 0); 
-           cout   : out std_logic; 
-           ACY    : out std_logic; 
-           SIGN   : out std_logic; 
-           PARITY : out std_logic; 
-           ZERO   : out std_logic; 
+entity alu is
+      generic ( n : integer := 7 ;  -- 8-bitlik veri (7 downto 0)
+                s : integer := 3) ;  -- 4-bitlik op_sel (3 downto 0)
+      port(dat_a  : in std_logic_vector(n downto 0);
+           dat_b  : in std_logic_vector(n downto 0);
+           dat_out: out std_logic_vector(n downto 0);
+           cout   : out std_logic;
+           ACY    : out std_logic;
+           SIGN   : out std_logic;
+           PARITY : out std_logic;
+           ZERO   : out std_logic;
            cin    : in std_logic; 
-           op_sel : in std_logic_vector(s downto 0)); 
-end alu; 
-  
-  
+           op_sel : in std_logic_vector(3 downto 0));
+end alu;
 
-architecture behav of alu is 
-   signal nd    : std_logic_vector(n downto 0 ); 
-   signal A_in_s    : std_logic_vector(n downto 0 ); 
-   signal B_in_s    : std_logic_vector(n downto 0 ); 
-   signal dat_b_n_s : std_logic_vector(n downto 0 ); 
-   signal dat_a_n_s : std_logic_vector(n downto 0 ); 
-   signal B_in_s_r  : std_logic_vector(n downto 0 ); 
-   signal A_in_s_r  : std_logic_vector(n downto 0 ); 
-   signal SUM_s     : std_logic_vector(n downto 0 ); 
-   signal cout_s    : std_logic ; 
-component ADDER8 
-  port( A_in : in std_logic_vector(n downto 0 ); 
-        B_in : in std_logic_vector(n downto 0 ); 
-        SUM  : out std_logic_vector(n downto 0 ); 
-        cin  : in std_logic ; 
-        ACY  : out std_logic ; 
-        cout : out std_logic ) ; 
-end component; 
 
- begin 
-A_in_s <= dat_a ; 
-B_in_s <= dat_b ; 
-dat_b_n_s <= not(dat_b) ; 
-dat_a_n_s <= not(dat_a) ; 
-A8_1 : adder8 port map (A_in => A_in_s_r , 
-        B_in => B_in_s_r , 
-        SUM  => SUM_s , 
-        cin  => cin , 
-        ACY  => ACY , 
-        cout => cout_s) ; 
+architecture behav of alu is
+    -- İç sinyaller
+    signal nd          : std_logic_vector(n downto 0 );
+    
+    -- Toplayıcı Girişleri ve Çıkışları
+    signal A_in_s_r    : std_logic_vector(n downto 0 );
+    signal B_in_s_r    : std_logic_vector(n downto 0 );
+    signal SUM_s       : std_logic_vector(n downto 0 );
+    signal cout_s      : std_logic ;
+    signal ACY_s       : std_logic ; 
+    
+    -- Mantık ve NOT işlemleri için sinyaller
+    signal dat_b_n_s   : std_logic_vector(n downto 0 );
+    signal dat_a_n_s   : std_logic_vector(n downto 0 );
 
-  process(dat_a, dat_b, op_sel, A_in_s, B_in_s, dat_b_n_s, dat_a_n_s, SUM_s, cout_s) 
-  variable dat_xor_res:std_logic_vector(n downto 0) ; 
-  variable dat_shr_res:std_logic_vector(n downto 0) ; 
-  variable dat_xnor_res:std_logic_vector(n downto 0); 
-  variable dat_and_res:std_logic_vector(n downto 0); 
-  variable dat_nand_res:std_logic_vector(n downto 0); 
-  variable dat_or_res:std_logic_vector(n downto 0); 
-  variable dat_nor_res:std_logic_vector(n downto 0); 
-  variable dat_out_var:std_logic_vector(n downto 0); 
-  variable op_sel_int : integer := 0 ; 
-  begin 
-   op_sel_int := CONV_INTEGER(op_sel); 
+    -- Aritmetik ve mantık işlemlerinde cin yerine kullanmak için geçici cin
+    signal cin_arith   : std_logic; 
+    
+    -- Sabit Sinyaller
+    constant C_ZERO : std_logic_vector(n downto 0) := (others => '0');
+    -- DCR için gereken -1 değerinin 2'ye tümleyeni (B'nin girişi): 1'in tersi ("11111110")
+    constant C_MINUS_ONE_COMPLEMENT : std_logic_vector(n downto 0) := "11111110"; 
 
-  for i in n downto 0 loop 
-   dat_xor_res(i) := dat_a(i) xor dat_b(i); 
-  end loop; 
+component ADDER8
+  port( A_in : in std_logic_vector(n downto 0 );
+        B_in : in std_logic_vector(n downto 0 );
+        SUM  : out std_logic_vector(n downto 0 );
+        cin  : in std_logic ;
+        ACY  : out std_logic ;
+        cout : out std_logic ) ;
+end component;
 
-  for i in n-1 downto 0 loop 
-   dat_shr_res(i) := dat_a(i+1) ; 
-  end loop; 
-   dat_shr_res(7) := '0' ; 
+begin
 
-  for i in n downto 0 loop 
-   dat_xnor_res(i) := not (dat_a(i) xor dat_b(i)); 
-  end loop; 
+-- Eşzamanlı Mantık Sinyalleri
+dat_b_n_s <= not(dat_b) ;
+dat_a_n_s <= not(dat_a) ;
 
-  for i in n downto 0 loop 
-   dat_and_res(i) := dat_a(i) and dat_b(i); 
-  end loop; 
+-- Toplayıcı Bağlantısı
+A8_1 : adder8 port map (A_in => A_in_s_r ,
+         B_in => B_in_s_r ,
+         SUM  => SUM_s ,
+         cin  => cin_arith , 
+         ACY  => ACY_s , 
+         cout => cout_s) ;
 
-  for i in n downto 0 loop 
-   dat_nand_res(i) := not (dat_a(i) and dat_b(i)); 
-  end loop; 
+-- Eşzamanlı Çıkış ve Bayrak Atamaları
+dat_out <= nd ;
+ACY <= ACY_s; 
 
-  for i in n downto 0 loop 
-   dat_or_res(i) := dat_a(i) or dat_b(i); 
-  end loop; 
-
-  for i in n downto 0 loop 
-   dat_nor_res(i) := not (dat_a(i) or dat_b(i)); 
-  end loop; dat_out <= dat_out_var ; 
-PARITY <= dat_out_var(0) xor dat_out_var(1) xor dat_out_var(2) xor dat_out_var(3) xor dat_out_var(4) xor dat_out_var(5) xor dat_out_var(6) xor dat_out_var(7) ; 
-nd <= dat_out_var ; 
-end process; 
-ZERO <= not (nd(0) and nd(1) and nd(2) and nd(3) and nd(4) and nd(5) and nd(6) and nd(7)) ; 
+-- ZERO bayrağı düzeltildi
+ZERO <= not (nd(0) or nd(1) or nd(2) or nd(3) or nd(4) or nd(5) or nd(6) or nd(7)) ;
 SIGN <= nd(7) ; 
-end behav; 
+PARITY <= nd(0) xor nd(1) xor nd(2) xor nd(3) xor nd(4) xor nd(5) xor nd(6) xor nd(7) ;
+
+
+process(dat_a, dat_b, op_sel, SUM_s, cout_s) 
+    
+    variable dat_xor_res : std_logic_vector(n downto 0);
+    variable dat_shr_res : std_logic_vector(n downto 0);
+    variable dat_and_res : std_logic_vector(n downto 0);
+    variable dat_or_res  : std_logic_vector(n downto 0);
+    
+    variable dat_out_var : std_logic_vector(n downto 0);
+    
+begin
+
+    -- Mantık ve Kaydırma Hesaplamaları
+    dat_xor_res := dat_a xor dat_b;
+    dat_and_res := dat_a and dat_b;
+    dat_or_res  := dat_a or dat_b;
+    
+    -- Lojik Sağa Kaydırma (Logical Shift Right)
+    for i in n-1 downto 0 loop
+        dat_shr_res(i) := dat_a(i+1) ;
+    end loop;
+    dat_shr_res(n) := '0' ; 
+
+
+    -- Varsayılan değerler
+    cout <= '0';
+    cin_arith <= '0';
+    
+    case op_sel is
+        
+        -- ARİTMETİK İŞLEMLER
+        when "1111" => -- ADD (A + B + cin)
+            A_in_s_r <= dat_a;
+            B_in_s_r <= dat_b;
+            cin_arith <= cin; 
+            dat_out_var := SUM_s;
+            cout <= cout_s;
+            
+        when "0001" => -- SUB (A - B) = A + ~B + 1
+            A_in_s_r <= dat_a;
+            B_in_s_r <= dat_b_n_s; 
+            cin_arith <= '1';      
+            dat_out_var := SUM_s;
+            cout <= cout_s;
+            
+        when "0010" => -- INC (A + 1) = A + 0 + 1
+            A_in_s_r <= dat_a;
+            B_in_s_r <= C_ZERO;    
+            cin_arith <= '1';      
+            dat_out_var := SUM_s;
+            cout <= cout_s;
+            
+        when "1000" => -- YENİ: DCR (A - 1) = A + (~1) + 1
+            A_in_s_r <= dat_a;
+            B_in_s_r <= C_MINUS_ONE_COMPLEMENT; -- B'ye -1'in tersi ("11111110") verilir
+            cin_arith <= '1';                   -- +1 eklenir
+            dat_out_var := SUM_s;
+            cout <= cout_s;
+            
+
+        -- MANTIK VE KAYDIRMA İŞLEMLERİ
+        when "0011" => -- AND (A & B)
+            dat_out_var := dat_and_res;
+            
+        when "0100" => -- OR (A | B)
+            dat_out_var := dat_or_res;
+            
+        when "0101" => -- XOR (A ^ B)
+            dat_out_var := dat_xor_res;
+
+        when "0110" => -- NOT A (~A)
+            dat_out_var := dat_a_n_s;
+            
+        when "0111" => -- SHR (Lojik Sağa Kaydırma)
+            dat_out_var := dat_shr_res;
+
+        when others => 
+            A_in_s_r <= A_in_s_r;
+            B_in_s_r <= B_in_s_r;
+            cin_arith <= cin_arith;
+            dat_out_var := dat_out_var; 
+
+    end case;
+
+    nd <= dat_out_var;
+    
+end process;
+
+end behav;
 ------------------------------------------------------------ 
 --DESIGN alu ENDS here 
 ------------------------------------------------------------ 
@@ -1476,7 +1542,7 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "11000010" => --  JNZ 
       if (ZERO = '0') then 
-         CONTROL_WORD := "000001000110000000000011111110101110" ; 
+         CONTROL_WORD := "000001000110010000000011001110000010" ; 
       elsif (ZERO = '1') then 
          CONTROL_WORD := "000001000110000000000011111110101110" ; 
       end if ; 
@@ -1495,10 +1561,10 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 -- ARITHMATIC/LOGIC OPERATIONS FOLLOWS 
 ----------------------------------------------------------------- 
        when  "00111101" => --  DCR A 
-         CONTROL_WORD := "000001110110010001101010001110011111" ; 
+         CONTROL_WORD := "000001110110010001100010001110011111" ; 
 
        when  "00000101" => --  DCR B 
-         CONTROL_WORD := "000001110110010001101010000000000011" ; 
+         CONTROL_WORD := "000001110110010001100010000000000011" ; 
 
        when  "00001101" => --  DCR C 
          CONTROL_WORD := "000001110110010001101010000010000111" ; 
@@ -1516,7 +1582,7 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
          CONTROL_WORD := "000001110110010001101010001010010111" ; 
 
        when  "00111100" => --  INR A 
-         CONTROL_WORD := "000001110110010001100110001110011111" ; 
+         CONTROL_WORD := "000001110110010001001010001110011111" ; 
 
        when  "00000100" => --  INR B 
          CONTROL_WORD := "000001110110010001100110000000000011" ; 
@@ -1789,7 +1855,7 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "11000010" => --  JNZ 
       if (ZERO = '0') then 
-        CONTROL_WORD := "010001000100100000000001010110101110" ; 
+        CONTROL_WORD := "000001000100100000000001011010101110" ; 
       elsif (ZERO = '1') then 
         CONTROL_WORD := "000001000110000100000011111110010110" ; 
       end if ; 
@@ -1869,7 +1935,7 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "11000010" => --  JNZ 
       if (ZERO = '0') then 
-        CONTROL_WORD := "000001000100100000000001010110101110" ; 
+        CONTROL_WORD := "000001000100100000000011111110101110" ; 
       elsif (ZERO = '1') then 
         CONTROL_WORD := "000001000110000000000011111110010111" ; 
       end if ; 
@@ -1910,7 +1976,7 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
         CONTROL_WORD := "000001000101001000000011111110101110" ; 
 
        when  "11000010" => --  JNZ 
-        CONTROL_WORD := "000001000101001000000011111110101110" ; 
+        CONTROL_WORD := "010001000101001100000011111110101110" ; 
 
        when  "11001101" => --  CALL 
          CONTROL_WORD := "000001000110100100000001001101111110" ; 
@@ -1942,7 +2008,7 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
         CONTROL_WORD := "000001000100100000000001011000101110" ; 
 
        when  "11000010" => --  JNZ 
-        CONTROL_WORD := "000001000100100000000001011000101110" ; 
+        CONTROL_WORD := "000001000100100000000001001100101110" ; 
 
        when  "11001101" => --  CALL 
          CONTROL_WORD := "000001000110100000000001001101111110" ; 
@@ -1976,7 +2042,7 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
         CONTROL_WORD := "000001000100000000000001111111111111" ; 
 
        when  "11000010" => --  JNZ 
-        CONTROL_WORD := "000001000100000000000001111111111111" ; 
+        CONTROL_WORD := "000001000100100000000011111110101110" ; 
 
        when  "11001101" => --  CALL 
          CONTROL_WORD := "010001000111001000000011111110101110" ; 
@@ -1993,6 +2059,8 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
          CONTROL_WORD := "000001000110100100000001011010101110" ; 
 		 when  "11000011" => --  JMP A16 
          CONTROL_WORD := "000001000110010000000011010110110110" ;
+       when  "11000010" => --  JNZ 
+        CONTROL_WORD := "000001000110010000000011010110110110" ;
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
     end case ; 
@@ -2005,6 +2073,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
          CONTROL_WORD := "001001000110100000000001011010101110" ; 
 		 when  "11000011" => --  JMP A16 
          CONTROL_WORD := "000001000110010000000011011000011011" ;
+       when  "11000010" => --  JNZ 
+         CONTROL_WORD := "000001000110010000000011011000011011" ;
+ 
 
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 

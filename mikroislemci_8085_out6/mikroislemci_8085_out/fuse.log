@@ -7,15 +7,17 @@ Parsing VHDL file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroisl
 Parsing VHDL file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/led_interface.vhd" into library work
 Parsing VHDL file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/latch8.vhd" into library work
 Parsing VHDL file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd" into library work
+Parsing VHDL file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/clk_divider.vhd" into library work
 Parsing VHDL file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" into library work
-WARNING:HDLCompiler:946 - "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" Line 115: Actual for formal port cpu_reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" Line 132: Actual for formal port cpu_reset is neither a static name nor a globally static expression
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 99760 KB
-Fuse CPU Usage: 1360 ms
+Fuse Memory Usage: 99772 KB
+Fuse CPU Usage: 1310 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
+Compiling architecture rtl of entity clk_divider [clk_divider_default]
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling architecture behav of entity trans_latch [trans_latch_default]
@@ -39,8 +41,8 @@ Compiling architecture rtl of entity memory32k [memory32k_default]
 Compiling architecture behavioral of entity led_interface [led_interface_default]
 Compiling architecture rtl of entity top_8085_with_mem
 Time Resolution for simulation is 1ps.
-Compiled 44 VHDL Units
+Compiled 46 VHDL Units
 Built simulation executable /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem_isim_beh.exe
-Fuse Memory Usage: 118984 KB
-Fuse CPU Usage: 1820 ms
-GCC CPU Usage: 1260 ms
+Fuse Memory Usage: 118976 KB
+Fuse CPU Usage: 1760 ms
+GCC CPU Usage: 1310 ms

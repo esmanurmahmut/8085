@@ -15,10 +15,18 @@ entity top_8085_with_mem is
         -- LED ÇIKIŞI (Led Interface'e bağlanacak)
         led_out    : out std_logic_vector(7 downto 0) 
     );
-end entity top_8085_with_mem;
-  
+end entity top_8085_with_mem; 
+   
 architecture rtl of top_8085_with_mem is
     -- ** COMPONENT TANIMLARI **
+	 component clk_divider -- YENI EKLEME
+        port (
+            clk_in    : in  std_logic;              
+            reset_n   : in  std_logic;              
+            clk_out   : out std_logic               
+        );
+    end component;
+	 
     component cpu_8085 
         port (
             data_bus  : inout std_logic_vector(7 downto 0);
@@ -39,7 +47,7 @@ architecture rtl of top_8085_with_mem is
             READY     : in  std_logic;
             RDn, WRn  : out std_logic;
             cnm       : out std_logic
-        );
+        ); 
     end component;
 
     component latch8
@@ -81,6 +89,8 @@ architecture rtl of top_8085_with_mem is
     -- ** SON COMPONENT TANIMLARI **
 
     -- CPU sinyalleri
+	 signal cpu_clk_3mhz : std_logic;
+	 
     signal data_bus    : std_logic_vector(7 downto 0);
     signal add_bus     : std_logic_vector(7 downto 0);
     signal ALE         : std_logic;
@@ -104,6 +114,13 @@ begin
     -- Tam adres hattı oluşturulması
     A_full <= add_bus & a_low_latched;  -- A15..A0
 
+	 clk_div_i : entity work.clk_divider
+        port map(
+            clk_in    => clk,
+            reset_n   => reset_n,
+            clk_out   => cpu_clk_3mhz -- 3 MHz olarak kullanılacak
+        );
+	
     ----------------------------------------------------------------------------
     -- 1. 8085 Çekirdeği Instantiation
     ----------------------------------------------------------------------------
@@ -120,7 +137,7 @@ begin
           RESETOUT  => RESETOUT,
           CLK_OUT   => CLK_OUT,
           
-          clk       => clk,
+          clk       => cpu_clk_3mhz,
           X1        => '0',
           X2        => '0',
           
@@ -147,7 +164,7 @@ begin
     ----------------------------------------------------------------------------
     latch_i : entity work.latch8
       port map(
-        clk       => clk,
+        clk       => cpu_clk_3mhz,
         ale       => ALE,
         ad_in     => data_bus,
         a_low     => a_low_latched
@@ -172,7 +189,7 @@ begin
           -- RAM'in 9 bitlik adres portuna A8..A0 bağlanır.
           addr     => A_full(8 downto 0), 
           data     => data_bus,
-          clk      => clk,
+          clk      => cpu_clk_3mhz,
           dbg_addr => dbg_addr,
           dbg_db   => dbg_db,
           dbg_rd   => dbg_rd,
@@ -185,7 +202,7 @@ begin
     -- LED'ler 0x80xx adresine haritalanmıştır (Mantık, led_interface içinde yer alır)
     led_i : component led_interface
         port map(
-            clk        => clk,
+            clk        => cpu_clk_3mhz,
             reset_n    => reset_n,
             A          => A_full,      -- Tam adres hattı (A15-A0)
             D_in       => data_bus,    -- Veri hattı
