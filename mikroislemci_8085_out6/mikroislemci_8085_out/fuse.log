@@ -12,12 +12,12 @@ Parsing VHDL file "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroisl
 WARNING:HDLCompiler:946 - "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.vhd" Line 132: Actual for formal port cpu_reset is neither a static name nor a globally static expression
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 99748 KB
-Fuse CPU Usage: 1320 ms
+Fuse Memory Usage: 99892 KB
+Fuse CPU Usage: 1270 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling architecture rtl of entity clk_divider [clk_divider_default]
+Compiling architecture rtl of entity clk_divider_1mhz [clk_divider_1mhz_default]
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling architecture behav of entity trans_latch [trans_latch_default]
@@ -43,6 +43,6 @@ Compiling architecture rtl of entity top_8085_with_mem
 Time Resolution for simulation is 1ps.
 Compiled 46 VHDL Units
 Built simulation executable /home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem_isim_beh.exe
-Fuse Memory Usage: 118976 KB
-Fuse CPU Usage: 1810 ms
-GCC CPU Usage: 1270 ms
+Fuse Memory Usage: 119176 KB
+Fuse CPU Usage: 1720 ms
+GCC CPU Usage: 1210 ms

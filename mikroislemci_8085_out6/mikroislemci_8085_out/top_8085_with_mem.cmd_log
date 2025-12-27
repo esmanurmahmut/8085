@@ -475,3 +475,10 @@ par -w -intstyle ise -ol high -t 1 top_8085_with_mem_map.ncd top_8085_with_mem.n
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_8085_with_mem.twx top_8085_with_mem.ncd -o top_8085_with_mem.twr top_8085_with_mem.pcf -ucf cnm.ucf 
 bitgen -intstyle ise -f top_8085_with_mem.ut top_8085_with_mem.ncd 
 xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 
+xst -intstyle ise -ifn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.xst" -ofn "/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_mem.syr" 

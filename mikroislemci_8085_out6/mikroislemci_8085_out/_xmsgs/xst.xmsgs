@@ -12,7 +12,7 @@
 <msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd</arg>&quot; line <arg fmt="%d" index="2">293</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd</arg>&quot; line <arg fmt="%d" index="2">898</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/cpu_8085.vhd</arg>&quot; line <arg fmt="%d" index="2">899</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;dat_out_regA&gt;, &lt;dat_out_regF&gt;, &lt;dat_out_regB&gt;, &lt;dat_out_regC&gt;, &lt;dat_out_regD&gt;, &lt;dat_out_regE&gt;, &lt;dat_out_regH&gt;, &lt;dat_out_regL&gt;, &lt;dat_out_regSPL&gt;, &lt;dat_out_regSPH&gt;, &lt;dat_out_regPCL&gt;, &lt;dat_out_regPCH&gt;, &lt;dat_out_regW&gt;, &lt;dat_out_regZ&gt;</arg>
 </msg>
 

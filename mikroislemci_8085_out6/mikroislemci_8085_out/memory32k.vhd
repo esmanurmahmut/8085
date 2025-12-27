@@ -32,10 +32,10 @@ architecture rtl of memory32k is
    -- others   => (others => '0')
   --);
     signal ram  : ram_t := (
-16#0000# => x"3E",  -- MVI A, 01H
-16#0001# => x"01",
+16#0000# => x"1E",  -- MVI A, 01H
+16#0001# => x"05",
 
-16#0002# => x"D3",  -- OUT 80H
+16#0002# => x"1A",  -- OUT 80H
 16#0003# => x"80",
 
 16#0004# => x"06",  -- MVI B, FFH

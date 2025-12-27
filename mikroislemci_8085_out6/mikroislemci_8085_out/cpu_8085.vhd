@@ -716,6 +716,7 @@ port ( DAT_IN    : in std_logic_vector(n downto 0) ;
        F_OUT     : out std_logic_vector(n downto 0) ; 
        H_OUT     : out std_logic_vector(n downto 0) ; 
        L_OUT     : out std_logic_vector(n downto 0) ; 
+		 W_OUT     : out std_logic_vector(n downto 0) ;
        SPH_OUT   : out std_logic_vector(n downto 0) ; 
        SEL_IN    : in std_logic_vector(s downto 0) ; 
        SEL_OUT   : in std_logic_vector(s downto 0)) ; 
@@ -1029,6 +1030,7 @@ F_OUT     <= dat_out_regF;
 H_OUT     <= dat_out_regH; 
 SPH_OUT   <= dat_out_regSPH; 
 L_OUT     <= dat_out_regL; 
+W_OUT     <= dat_out_regW;
 end behav ; 
 ------------------------------------------------------------ 
 --DESIGN REG_ARR ENDS here 
@@ -1183,6 +1185,7 @@ entity add_latch_high is
       dat_B   : in std_logic_vector(7 downto 0) ; 
       dat_D   : in std_logic_vector(7 downto 0) ; 
       dat_SPH : in std_logic_vector(7 downto 0) ; 
+      dat_W : in std_logic_vector(7 downto 0) ; 
       SEL     : in std_logic_vector(2 downto 0) ; 
       clk     : in std_logic ; 
       clrn    : in std_logic ; 
@@ -1212,7 +1215,7 @@ LATCH_1:reg8 port map (data_in => data_reg8 ,
                        clk     => clk , 
                        data_out    => data_out ); 
 
-   process(dat_SPH,sel,dat_pch,dat_H,dat_B,dat_D) 
+   process(dat_SPH,sel,dat_pch,dat_H,dat_B,dat_D,dat_W) 
     variable data_reg8_var : std_logic_vector(n downto 0);-- := "00000000"; 
       begin 
        case sel is 
@@ -1230,7 +1233,10 @@ LATCH_1:reg8 port map (data_in => data_reg8 ,
 
          when  "100" => 
       data_reg8_var :=  dat_SPH ; 
-
+ 
+         when  "101" => 
+      data_reg8_var :=  dat_W ; 
+		
          when others => 
       data_reg8_var :=  "00000000"; 
        end case ; 
@@ -1722,6 +1728,18 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
         CONTROL_WORD := "000001100110010001001111001110010111" ; 
 		 when  "00000000" => --  NOP --BEN EKLEDİM
         CONTROL_WORD := "000001000110010000000011001110011111" ; 
+		----------------------------------------------------------------
+	   ------YENİ EKLENEN KOMUTLAR 
+		---------------------------------------------------
+		when  "00111010" => --  LDA 
+        CONTROL_WORD := "000001000110010000000011001110000010" ; 	
+		 
+		when  "00001010" => --  LDAX B 
+        CONTROL_WORD := "000001000110010000000011001110000010" ; 		
+
+		when  "00011010" => --  LDAX D
+        CONTROL_WORD := "000001000110010000000011001110000010" ; 
+		  
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
     end case ; 
@@ -1797,8 +1815,15 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "11001101" => --  CALL 
          CONTROL_WORD := "000001000110000000000011111111111110" ; 
+
+		when  "00111010" => --  LDA 
+        CONTROL_WORD := "010001000101001100000011111110101110" ; 	
   
-  
+		when  "00001010" => --  LDAX B 
+        CONTROL_WORD := "010011000101001000000011111110000110" ; 	
+
+		when  "00011010" => --  LDAX D
+        CONTROL_WORD := "010101000101001000000011111110001110" ;		  
 
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
@@ -1877,7 +1902,14 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
        when  "11001101" => --  CALL 
          CONTROL_WORD := "000001000110000000000011010101111110" ; 
   
-  
+		when  "00111010" => --  LDA 
+        CONTROL_WORD := "000001000100100000000001001100101110" ; 	  
+		  
+		when  "00001010" => --  LDAX B 
+        CONTROL_WORD := "000011000100100000000001001110000110" ; 		
+
+		when  "00011010" => --  LDAX D
+        CONTROL_WORD := "000101000100100000000001001110001110" ;		  
 
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
@@ -1956,7 +1988,15 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "11001101" => --  CALL 
          CONTROL_WORD := "010001000111001000000011111110101110" ; 
-  
+
+		when  "00111010" => --  LDA 
+        CONTROL_WORD := "000001000100100000000011111110101110" ; 	  
+		  
+		when  "00001010" => --  LDAX B 
+        CONTROL_WORD := "000011000100100000000011111110000111" ; 			
+
+		when  "00011010" => --  LDAX D
+        CONTROL_WORD := "000101000100100000000011111110001111" ;		  
 
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
@@ -1995,6 +2035,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
        when  "11001101" => --  CALL 
          CONTROL_WORD := "000001000110100100000001001101111110" ; 
 
+		 when  "00111010" => --  LDA 
+         CONTROL_WORD := "010001000101001100000011111110101110" ; 	
+
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
     end case ; 
@@ -2026,6 +2069,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 
        when  "11001101" => --  CALL 
          CONTROL_WORD := "000001000110100000000001001101111110" ; 
+			
+		when  "00111010" => --  LDA 
+         CONTROL_WORD := "000001000100100000000001011010101110" ; 	
 
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
@@ -2061,6 +2107,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
        when  "11001101" => --  CALL 
          CONTROL_WORD := "010001000111001000000011111110101110" ; 
 
+		when  "00111010" => --  LDA 
+        CONTROL_WORD := "000001000100100000000011111110101110" ; 	
+
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
     end case ; 
@@ -2088,6 +2137,10 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 		  
        when  "11000010" => --  JNZ 
         CONTROL_WORD := "000001000110010000000011010110110110" ;
+		  
+		when  "00111010" => --  LDA 
+        CONTROL_WORD := "011011000101001000000011111110011010" ; 			  
+		  
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
     end case ; 
@@ -2115,7 +2168,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
 			
        when  "11000010" => --  JNZ 
          CONTROL_WORD := "000001000110010000000011011000011011" ;
- 
+		
+		when  "00111010" => --  LDA 
+         CONTROL_WORD := "001011000100100000000001001111111110" ; 			
 
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
@@ -2127,6 +2182,9 @@ variable INTR_WORD    : std_logic_vector(4 downto 0) ;
     case ID_OUT_S is 
        when  "11001101" => --  CALL 
          CONTROL_WORD := "011001000111001000000011010100100110" ; 
+			
+		 when  "00111010" => --  LDA 
+         CONTROL_WORD := "001011000100100000000011111111111111" ; 	
 
     when others => 
         CONTROL_WORD := "000001000000000000000010111111111110" ; 
@@ -2302,7 +2360,8 @@ signal E_OUT_S        : std_logic_vector(7 downto 0) ;
 signal F_OUT_S        : std_logic_vector(7 downto 0) ; 
 signal H_OUT_S        : std_logic_vector(7 downto 0) ; 
 signal L_OUT_S        : std_logic_vector(7 downto 0) ; 
-signal T_OUT_S        : std_logic_vector(7 downto 0) ; 
+signal T_OUT_S        : std_logic_vector(7 downto 0) ;
+signal W_OUT_S        : std_logic_vector(7 downto 0) ;  
 signal SPH_OUT_S      : std_logic_vector(7 downto 0) ; 
 signal ID_OUT_S       : std_logic_vector(7 downto 0) ; 
 signal SEL_IN         : std_logic_vector(4 downto 0) ; 
@@ -2337,6 +2396,7 @@ component  add_latch_high
       dat_B   : in std_logic_vector(7 downto 0) ; 
       dat_D   : in std_logic_vector(7 downto 0) ; 
       dat_SPH : in std_logic_vector(7 downto 0) ; 
+      dat_W   : in std_logic_vector(7 downto 0) ; 
       SEL     : in std_logic_vector(2 downto 0) ; 
       clk     : in std_logic ; 
       clrn    : in std_logic ; 
@@ -2443,6 +2503,7 @@ port ( DAT_IN    : in std_logic_vector(n downto 0) ;
        F_OUT     : out std_logic_vector(n downto 0) ; 
        H_OUT     : out std_logic_vector(n downto 0) ; 
        L_OUT     : out std_logic_vector(n downto 0) ; 
+       W_OUT     : out std_logic_vector(n downto 0) ; 		 
        SPH_OUT   : out std_logic_vector(n downto 0) ; 
        SEL_IN    : in std_logic_vector(s downto 0) ; 
        SEL_OUT   : in std_logic_vector(s downto 0)) ; 
@@ -2486,6 +2547,7 @@ ADD_LATCH_1: add_latch_high port map (dat_pch => ADD_HIGH_S,
       dat_B   => B_OUT_S , 
       dat_D   => D_OUT_S , 
       dat_SPH => SPH_OUT_S , 
+		dat_W   => W_OUT_S ,
       SEL     => SEL_S , 
       clk     => clk , 
       clrn    => cpu_reset, 
@@ -2533,6 +2595,7 @@ REGS_1 : REG_ARR
        F_OUT   => F_OUT_S, 
        H_OUT   => H_OUT_S, 
        L_OUT   => L_OUT_S, 
+		 W_OUT   => W_OUT_S,
        SPH_OUT   => SPH_OUT_S, 
        SEL_IN    => SEL_IN, 
        SEL_OUT   => SEL_OUT); 
