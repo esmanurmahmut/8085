@@ -15,7 +15,6 @@ at 0 ps, Instance /top_8085_with_mem/cpu_i/REGS_1/ : Warning: CONV_INTEGER: Ther
 at 0 ps, Instance /top_8085_with_mem/cpu_i/REGS_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 0 ps, Instance /top_8085_with_mem/ram_i/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
-# isim force add /top_8085_with_mem/cpu_clk_3mhz 0 -radix bin -value 1 -radix bin -time 500 ns -repeat 1 us
 # restart
 # isim force add /top_8085_with_mem/cpu_clk_3mhz 0 -radix bin -value 1 -radix bin -time 500 ns -repeat 1 us
 # isim force add /top_8085_with_mem/reset_n 1 -radix bin
@@ -38,3 +37,71 @@ at 0 ps, Instance /top_8085_with_mem/ram_i/ : Warning: NUMERIC_STD.TO_INTEGER: m
 # run 1.00us
 # run 1.00us
 # run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# restart
+# exit 0

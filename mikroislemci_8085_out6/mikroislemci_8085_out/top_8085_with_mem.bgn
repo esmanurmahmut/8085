@@ -6,7 +6,7 @@ Loading device for application Rf_Device from file '3s100e.nph' in environment
 speed -4
 Opened constraints file top_8085_with_mem.pcf.
 
-Thu Dec  4 11:18:34 2025
+Fri Dec 26 09:43:18 2025
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No top_8085_with_mem.ncd 
 
@@ -91,7 +91,16 @@ There were 0 CONFIG constraint(s) processed from top_8085_with_mem.pcf.
 
 
 Running DRC.
-DRC detected 0 errors and 0 warnings.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu_i/ALU_1/dat_out_var_or0000 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu_i/ALU_1/B_in_s_r_not0001 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "top_8085_with_mem.bit".
 Bitstream generation is complete.

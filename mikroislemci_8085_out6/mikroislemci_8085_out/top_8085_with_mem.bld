@@ -6,8 +6,8 @@ ise -dd _ngo -nt timestamp -uc cnm.ucf -p xc3s100e-vq100-4 top_8085_with_mem.ngc
 top_8085_with_mem.ngd
 
 Reading NGO file
-"/home/ise/ISEshared/mikroislemci_8085_out6/mikroislemci_8085_out/top_8085_with_
-mem.ngc" ...
+"/home/ise/ISEshared/8085/8085/mikroislemci_8085_out6/mikroislemci_8085_out/top_
+8085_with_mem.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,7 +29,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 489448 kilobytes
+Total memory usage is 489556 kilobytes
 
 Writing NGD file "top_8085_with_mem.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec
